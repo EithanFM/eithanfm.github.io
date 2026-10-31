@@ -7,7 +7,8 @@ export const site = {
   name: "Eithan Flores",
   url: "https://eithanfm.github.io",
   title: "Eithan Flores",
-  description: headline,
+  description:
+    "Finance & Management student at Hult International Business School in Cambridge, MA, building skills in valuation, markets and strategy consulting.",
   ogImage: "/og.png",
   headline,
   photo: {
