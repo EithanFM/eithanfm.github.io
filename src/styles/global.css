@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/newsreader/wght.css";
+
+@theme {
+  --font-sans: "Inter Variable", "Segoe UI", sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --color-paper: #f4f2ee;
+  --color-ink: #1c232c;
+  --color-navy: #13293d;
+  --color-navy-soft: #1c3d5c;
+  --color-muted: #3f4a57;
+  --color-line: #e3ddd4;
+  --color-card: #ffffff;
+}
+
+html {
+  background-color: #f4f2ee;
+  color-scheme: light;
+  overflow-x: clip;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .shell {
+    padding-inline: 2rem;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid #13293d;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #d5e0ea;
+  color: #13293d;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

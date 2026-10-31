@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import { site } from "../data/site";
+
+const monogram = site.name
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((part) => part[0])
+  .join("")
+  .slice(0, 2)
+  .toUpperCase();
+---
+
+<section id="top" class="py-14 sm:py-20 lg:py-24" aria-labelledby="site-name">
+  <div class="shell grid items-center gap-12 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-16 lg:grid-cols-[minmax(0,1fr)_18rem]">
+    <div class="min-w-0">
+      <h1
+        id="site-name"
+        class="font-serif text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-navy text-balance md:text-6xl lg:text-7xl"
+      >
+        {site.name}
+      </h1>
+      <p class="mt-6 max-w-xl font-serif text-xl leading-snug text-ink text-pretty sm:text-2xl">
+        {site.headline}
+      </p>
+      <div class="mt-8 flex flex-col items-start gap-3">
+        <button
+          type="button"
+          disabled
+          class="inline-flex min-h-11 cursor-not-allowed items-center bg-navy px-5 text-sm font-medium text-white disabled:bg-navy disabled:text-white disabled:opacity-100"
+        >
+          {site.cv.label}
+        </button>
+        <p class="text-sm leading-6 text-ink">{site.cv.note}</p>
+      </div>
+    </div>
+    <div class="mx-auto w-44 md:mx-0 md:w-full">
+      {
+        site.photo.src ? (
+          <Image
+            src={site.photo.src}
+            alt={site.photo.alt}
+            widths={[176, 288, 360, 576]}
+            sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, 11rem"
+            loading="eager"
+            class="aspect-square w-full border border-line object-cover"
+          />
+        ) : (
+          <div class="flex aspect-[4/5] w-full flex-col items-center justify-center gap-3 border border-line bg-card px-4 text-center">
+            <span class="font-serif text-4xl tracking-tight text-navy" aria-hidden="true">
+              {monogram}
+            </span>
+            <p class="text-xs leading-5 text-ink">{site.photo.alt}</p>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

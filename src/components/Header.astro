@@ -1,0 +1,26 @@
+---
+import { navigation, site } from "../data/site";
+---
+
+<header class="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-sm">
+  <div class="h-[3px] bg-navy" aria-hidden="true"></div>
+  <div class="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+    <a href="#top" class="font-serif text-lg tracking-tight text-navy">{site.name}</a>
+    <nav aria-label="Sections">
+      <ul class="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-5">
+        {
+          navigation.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="inline-flex py-1 text-[0.8125rem] font-medium text-navy underline-offset-4 hover:underline sm:text-sm"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
