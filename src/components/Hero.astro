@@ -25,14 +25,13 @@ const monogram = site.name
         {site.headline}
       </p>
       <div class="mt-8 flex flex-col items-start gap-3">
-        <button
-          type="button"
-          disabled
-          class="inline-flex min-h-11 cursor-not-allowed items-center bg-accent px-5 text-sm font-medium tracking-wide text-white shadow-card disabled:bg-accent disabled:text-white disabled:opacity-100"
+        <a
+          href={`${import.meta.env.BASE_URL}eithan-flores-cv.pdf`}
+          download="Eithan_Flores_CV.pdf"
+          class="inline-flex min-h-11 items-center bg-accent px-5 text-sm font-medium tracking-wide text-white no-underline shadow-card"
         >
           {site.cv.label}
-        </button>
-        <p class="text-sm leading-6 text-ink">{site.cv.note}</p>
+        </a>
       </div>
     </div>
     <div class="mx-auto w-44 md:mx-0 md:w-full">
