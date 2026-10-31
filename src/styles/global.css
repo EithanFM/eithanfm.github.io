@@ -5,17 +5,19 @@
 @theme {
   --font-sans: "Inter Variable", "Segoe UI", sans-serif;
   --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
-  --color-paper: #f4f2ee;
-  --color-ink: #1c232c;
-  --color-navy: #13293d;
-  --color-navy-soft: #1c3d5c;
-  --color-muted: #3f4a57;
-  --color-line: #e3ddd4;
+  --color-paper: #f5f8fc;
+  --color-ink: #1c3148;
+  --color-navy: #0a2540;
+  --color-navy-soft: #163e63;
+  --color-accent: #1f4e79;
+  --color-muted: #44586c;
+  --color-line: #d7e1ec;
   --color-card: #ffffff;
+  --shadow-card: 0 1px 2px rgb(10 37 64 / 0.04), 0 12px 28px rgb(31 78 121 / 0.07);
 }
 
 html {
-  background-color: #f4f2ee;
+  background-color: var(--color-paper);
   color-scheme: light;
   overflow-x: clip;
 }
@@ -42,13 +44,13 @@ section[id] {
 }
 
 :focus-visible {
-  outline: 2px solid #13293d;
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
 ::selection {
-  background: #d5e0ea;
-  color: #13293d;
+  background: #d5e4f2;
+  color: var(--color-navy);
 }
 
 @media (prefers-reduced-motion: no-preference) {
