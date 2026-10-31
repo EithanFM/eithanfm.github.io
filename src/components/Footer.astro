@@ -10,7 +10,10 @@ const year = new Date().getFullYear();
       <p class="font-serif text-xl tracking-tight text-navy">{site.name}</p>
     </div>
     <div class="flex flex-col items-start gap-2 text-sm sm:items-end">
-      <a href="#top" class="font-medium text-navy underline decoration-line underline-offset-4 hover:decoration-navy">
+      <a
+        href="#top"
+        class="font-medium text-accent underline decoration-transparent underline-offset-4 transition-colors duration-150 hover:text-navy-soft hover:decoration-accent"
+      >
         Back to top
       </a>
       <p class="text-muted">© {year} {site.name}</p>

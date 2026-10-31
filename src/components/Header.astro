@@ -2,10 +2,15 @@
 import { navigation, site } from "../data/site";
 ---
 
-<header class="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-sm">
-  <div class="h-[3px] bg-navy" aria-hidden="true"></div>
+<header class="sticky top-0 z-20 border-b border-line bg-card/95 shadow-[0_8px_24px_-18px_rgb(10_37_64/0.55)] backdrop-blur-md">
+  <div class="h-0.5 bg-accent" aria-hidden="true"></div>
   <div class="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
-    <a href="#top" class="font-serif text-lg tracking-tight text-navy">{site.name}</a>
+    <a
+      href="#top"
+      class="font-serif text-lg tracking-tight text-navy transition-colors duration-150 hover:text-accent"
+    >
+      {site.name}
+    </a>
     <nav aria-label="Sections">
       <ul class="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-5">
         {
@@ -13,7 +18,7 @@ import { navigation, site } from "../data/site";
             <li>
               <a
                 href={item.href}
-                class="inline-flex py-1 text-[0.8125rem] font-medium text-navy underline-offset-4 hover:underline sm:text-sm"
+                class="inline-flex py-1 text-[0.8125rem] font-medium text-accent underline decoration-transparent decoration-2 underline-offset-[6px] transition-colors duration-150 hover:text-navy-soft hover:decoration-accent focus-visible:decoration-accent sm:text-sm"
               >
                 {item.label}
               </a>
