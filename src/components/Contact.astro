@@ -1,0 +1,40 @@
+---
+import { site } from "../data/site";
+import Section from "./Section.astro";
+
+const channels = [
+  {
+    label: "LinkedIn",
+    value: site.contact.linkedin,
+    href: site.contact.linkedin,
+    external: true,
+  },
+  {
+    label: "Email",
+    value: site.contact.email,
+    href: `mailto:${site.contact.email}`,
+    external: false,
+  },
+];
+---
+
+<Section id="contact" title="Contact">
+  <dl class="grid gap-10 sm:grid-cols-2">
+    {
+      channels.map((channel) => (
+        <div class="min-w-0 border-t border-navy pt-4">
+          <dt class="text-sm font-medium text-navy">{channel.label}</dt>
+          <dd class="mt-3 font-serif text-2xl leading-snug text-navy [overflow-wrap:anywhere]">
+            <a
+              href={channel.href}
+              class="underline decoration-line underline-offset-4 hover:decoration-navy"
+              {...(channel.external ? { target: "_blank", rel: "noopener" } : {})}
+            >
+              {channel.value}
+            </a>
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+</Section>

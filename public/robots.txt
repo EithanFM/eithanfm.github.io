@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eithanfm.github.io/sitemap-index.xml
