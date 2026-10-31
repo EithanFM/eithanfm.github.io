@@ -7,7 +7,7 @@ import { navigation, site } from "../data/site";
   <div class="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
     <a
       href="#top"
-      class="font-serif text-lg tracking-tight text-navy transition-colors duration-150 hover:text-accent"
+      class="flex min-h-11 items-center -my-2 font-serif text-lg tracking-tight text-navy transition-colors duration-150 hover:text-accent"
     >
       {site.name}
     </a>
@@ -18,9 +18,13 @@ import { navigation, site } from "../data/site";
             <li>
               <a
                 href={item.href}
-                class="inline-flex py-1 text-[0.8125rem] font-medium text-accent underline decoration-transparent decoration-2 underline-offset-[6px] transition-colors duration-150 hover:text-navy-soft hover:decoration-accent focus-visible:decoration-accent sm:text-sm"
+                class="group inline-flex min-h-11 min-w-11 items-center justify-center px-2 py-[12.25px] -mx-2 -my-[8.25px] text-[0.8125rem] font-medium text-accent transition-colors duration-150 hover:text-navy-soft sm:text-sm"
               >
-                {item.label}
+                <span
+                  class="underline decoration-transparent decoration-2 underline-offset-[6px] group-hover:decoration-accent group-focus-visible:decoration-accent"
+                >
+                  {item.label}
+                </span>
               </a>
             </li>
           ))
