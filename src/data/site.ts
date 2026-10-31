@@ -21,7 +21,6 @@ export const site = {
   ],
   cv: {
     label: "Download CV",
-    note: "CV coming soon",
   },
   projects: [
     {
