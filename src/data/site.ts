@@ -117,7 +117,7 @@ export const site = {
 
 export const navigation = [
   { href: "#about", label: "About" },
-  { href: "#leadership", label: "Leadership" },
+  { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
