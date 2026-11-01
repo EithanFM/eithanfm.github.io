@@ -4,7 +4,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="about" title="About">
-  <div class="max-w-2xl space-y-5 text-lg leading-relaxed text-pretty">
+  <div class="max-w-2xl space-y-5 text-lg leading-relaxed text-pretty sm:hyphens-auto sm:text-justify">
     {site.about.map((paragraph) => <p>{paragraph}</p>)}
   </div>
 </Section>
