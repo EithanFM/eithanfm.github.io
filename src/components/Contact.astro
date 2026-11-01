@@ -18,11 +18,11 @@ const channels = [
 ];
 ---
 
-<Section id="contact" title="Contact" accent={false}>
+<Section id="contact" title="Contact">
   <dl class="grid gap-10 sm:grid-cols-2">
     {
       channels.map((channel) => (
-        <div class="min-w-0 border-t border-accent/50 pt-4">
+        <div class="min-w-0">
           <dt class="text-sm font-medium text-navy">{channel.label}</dt>
           <dd class="mt-3 font-serif text-2xl leading-snug [overflow-wrap:anywhere]">
             <a
