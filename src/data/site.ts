@@ -25,7 +25,7 @@ export const site = {
   projects: [
     {
       title: "Microsoft (MSFT) Equity Research & Valuation",
-      dates: "Sep–Dec 2025",
+      dates: "Sep to Dec 2025",
       description:
         "Built a 3-stage DCF in Excel (WACC, sensitivity analysis, comps) and delivered a formal SELL recommendation with a $134.57 target price.",
       note: "Academic project, not investment advice.",
@@ -37,19 +37,19 @@ export const site = {
         "Designed and ran a trend-following futures strategy; the Russell 2000 (RTY) trade returned +3.49% ROI.",
     },
     {
-      title: "Strategy Consultant — Hult live client project",
+      title: "Strategy Consultant, Hult live client project",
       dates: "Jun 2026",
       description:
         "Developed growth strategy ideas for a nonprofit and presented them to its senior leaders.",
     },
     {
-      title: "Operations Consultant — Hult live client project",
-      dates: "Mar–Apr 2026",
+      title: "Operations Consultant, Hult live client project",
+      dates: "Mar to Apr 2026",
       description:
         "Helped build an operations KPI dashboard and analyze production bottlenecks for an advanced-materials startup.",
     },
     {
-      title: "Korn Ferry — Client Case Competition",
+      title: "Korn Ferry, Client Case Competition",
       dates: "Apr 2026",
       description:
         "Built the 3-phase implementation roadmap for an AI client-intelligence platform and presented the business impact case.",
@@ -61,14 +61,14 @@ export const site = {
         "Built and tested a working AI agent with Agentforce Builder in one evening; 1st place in the Agentforce Build Challenge Kahoot.",
     },
     {
-      title: "Hult Prize — Ohuatl",
-      dates: "Sep 2025–Feb 2026",
+      title: "Hult Prize, Ohuatl",
+      dates: "Sep 2025 to Feb 2026",
       description:
         "Co-developed a circular-fashion solution to textile waste (UN SDGs 12 & 13), validated with market research in Mexico.",
     },
     {
       title: "Cohort Captain, Hult Student Association",
-      dates: "Sep 2024–May 2025",
+      dates: "Sep 2024 to May 2025",
       description: "Main link between 40+ first-year students and faculty; ran 8 team-building sessions.",
     },
     {
@@ -77,8 +77,8 @@ export const site = {
       description: "School event organizer.",
     },
     {
-      title: "Amazon (AMZN) Financial Analysis 2020–2025",
-      dates: "Feb–Apr 2025",
+      title: "Amazon (AMZN) Financial Analysis 2020 to 2025",
+      dates: "Feb to Apr 2025",
       description: "Analyzed 6 years of SEC filings and presented growth trends.",
     },
   ],
@@ -88,10 +88,10 @@ export const site = {
     {
       heading: "Forage job simulations",
       items: [
-        "Bank of America — Global Markets Sales & Trading Job Simulation · Apr 2025",
-        "New York Jobs CEO Council — Financial Analyst Job Simulation · Sep 2025",
-        "Chartered Accountants ANZ — \"What's it like to run your own business?\" · Nov 2025",
-        "Forage — Excel Skills for Business · Apr 2025",
+        "Bank of America, Global Markets Sales & Trading Job Simulation · Apr 2025",
+        "New York Jobs CEO Council, Financial Analyst Job Simulation · Sep 2025",
+        "Chartered Accountants ANZ, \"What's it like to run your own business?\" · Nov 2025",
+        "Forage, Excel Skills for Business · Apr 2025",
       ],
     },
     {
@@ -108,8 +108,8 @@ export const site = {
     {
       heading: "Coursera",
       items: [
-        "Basic Statistics — University of Amsterdam · Sep 2025",
-        "Business Writing — University of Colorado Boulder · Feb 2025",
+        "Basic Statistics, University of Amsterdam · Sep 2025",
+        "Business Writing, University of Colorado Boulder · Feb 2025",
         "Introduction to Academic Writing",
       ],
     },
