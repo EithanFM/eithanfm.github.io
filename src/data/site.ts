@@ -72,11 +72,6 @@ export const site = {
       description: "Main link between 40+ first-year students and faculty; ran 8 team-building sessions.",
     },
     {
-      title: "Event Organizer, Bachillerato Carlos Dickens (Córdoba, Mexico)",
-      dates: "Since Aug 2023",
-      description: "School event organizer.",
-    },
-    {
       title: "Amazon (AMZN) Financial Analysis 2020 to 2025",
       dates: "Feb to Apr 2025",
       description: "Analyzed 6 years of SEC filings and presented growth trends.",
@@ -122,7 +117,7 @@ export const site = {
 
 export const navigation = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
+  { href: "#leadership", label: "Leadership" },
   { href: "#skills", label: "Skills" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
