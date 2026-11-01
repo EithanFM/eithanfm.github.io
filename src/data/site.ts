@@ -26,6 +26,7 @@ export const site = {
     {
       title: "Microsoft (MSFT) Equity Research & Valuation",
       dates: "Sep to Dec 2025",
+      href: "/projects/microsoft-msft-valuation/",
       description:
         "Built a 3-stage DCF in Excel (WACC, sensitivity analysis, comps) and delivered a formal SELL recommendation with a $134.57 target price.",
       note: "Academic project, not investment advice.",
@@ -33,36 +34,42 @@ export const site = {
     {
       title: "CME Group Derivatives Trading Challenge",
       dates: "Aug 2025",
+      href: "/projects/cme-derivatives-trading-challenge/",
       description:
         "Designed and ran a trend-following futures strategy; the Russell 2000 (RTY) trade returned +3.49% ROI.",
     },
     {
       title: "Strategy Consultant, Hult live client project",
       dates: "Jun 2026",
+      href: "/projects/nonprofit-growth-strategy/",
       description:
         "Developed growth strategy ideas for a nonprofit and presented them to its senior leaders.",
     },
     {
       title: "Operations Consultant, Hult live client project",
       dates: "Mar to Apr 2026",
+      href: "/projects/materials-startup-operations/",
       description:
         "Helped build an operations KPI dashboard and analyze production bottlenecks for an advanced-materials startup.",
     },
     {
       title: "Korn Ferry, Client Case Competition",
       dates: "Apr 2026",
+      href: "/projects/korn-ferry-case-competition/",
       description:
         "Built the 3-phase implementation roadmap for an AI client-intelligence platform and presented the business impact case.",
     },
     {
       title: "Salesforce Fall Hack-a-thon (Agentforce track)",
       dates: "Oct 2026",
+      href: "/projects/salesforce-hackathon-agentforce/",
       description:
         "Built and tested a working AI agent with Agentforce Builder in one evening; 1st place in the Agentforce Build Challenge Kahoot.",
     },
     {
       title: "Hult Prize, Ohuatl",
       dates: "Sep 2025 to Feb 2026",
+      href: "/projects/hult-prize-ohuatl/",
       description:
         "Co-developed a circular-fashion solution to textile waste (UN SDGs 12 & 13), validated with market research in Mexico.",
     },
@@ -75,6 +82,12 @@ export const site = {
       title: "Amazon (AMZN) Financial Analysis 2020 to 2025",
       dates: "Feb to Apr 2025",
       description: "Analyzed 6 years of SEC filings and presented growth trends.",
+      href: "/projects/amazon-amzn-financial-analysis/",
+    },
+    {
+      title: "The Refining Chokepoint, U.S. AI Supply Chain Vulnerability",
+      dates: "Jun 2026 (report dated Jun 16, 2026)",
+      href: "/projects/global-crises-ai-minerals/",
     },
   ],
   skills:
