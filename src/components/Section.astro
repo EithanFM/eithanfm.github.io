@@ -2,9 +2,10 @@
 interface Props {
   id: string;
   title: string;
+  accent?: boolean;
 }
 
-const { id, title } = Astro.props;
+const { id, title, accent = true } = Astro.props;
 const headingId = `${id}-title`;
 ---
 
@@ -13,7 +14,7 @@ const headingId = `${id}-title`;
     <h2 id={headingId} class="font-serif text-3xl font-medium tracking-tight text-navy text-balance sm:text-4xl">
       {title}
     </h2>
-    <div class="mt-4 h-0.5 w-14 bg-accent" aria-hidden="true"></div>
+    {accent ? <div class="mt-4 h-0.5 w-14 bg-accent" aria-hidden="true"></div> : null}
     <div class="mt-8 sm:mt-10">
       <slot />
     </div>
