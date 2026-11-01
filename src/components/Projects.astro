@@ -1,4 +1,5 @@
 ---
+import ProjectCard from "./ProjectCard.astro";
 import { site } from "../data/site";
 import Section from "./Section.astro";
 ---
@@ -7,17 +8,19 @@ import Section from "./Section.astro";
   <div class="grid gap-6 lg:grid-cols-2">
     {
       site.projects.map((project) => (
-        <article class="flex h-full min-w-0 flex-col border border-line bg-card shadow-card transition-colors duration-150 hover:border-accent/40">
+        <ProjectCard href={"href" in project ? project.href : undefined}>
           <div class="h-0.5 bg-accent" aria-hidden="true" />
           <div class="flex flex-1 flex-col px-6 py-7 sm:px-7 sm:py-8">
             <h3 class="font-serif text-2xl font-medium tracking-tight text-navy text-balance">{project.title}</h3>
             <p class="mt-3 text-sm leading-6 text-ink">{project.dates}</p>
-            <p class="mt-4 leading-relaxed text-pretty">{project.description}</p>
+            {"description" in project && project.description ? (
+              <p class="mt-4 leading-relaxed text-pretty">{project.description}</p>
+            ) : null}
             {"note" in project && project.note ? (
               <p class="mt-4 text-sm leading-6 text-ink">{project.note}</p>
             ) : null}
           </div>
-        </article>
+        </ProjectCard>
       ))
     }
   </div>
