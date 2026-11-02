@@ -37,9 +37,9 @@ const { project } = Astro.props;
                 {section.heading}
               </h2>
               <div class="mt-4 h-0.5 w-14 bg-accent" aria-hidden="true" />
-              <div class="mt-6 max-w-2xl space-y-4 text-base leading-relaxed">
+              <div class="mt-6 max-w-2xl space-y-4 text-base leading-relaxed hyphens-auto text-justify">
                 {section.paragraphs.map((paragraph) => (
-                  <p class="text-pretty sm:hyphens-auto sm:text-justify">{paragraph}</p>
+                  <p class="text-pretty">{paragraph}</p>
                 ))}
               </div>
             </section>
