@@ -13,7 +13,7 @@ const documentTitles: Record<string, string> = {
   "hult-prize-ohuatl": "Hult Prize, Ohuatl",
   "korn-ferry-case-competition": "Korn Ferry Client Case Competition",
   "materials-startup-operations": "Operations Consultant, Hult",
-  "microsoft-msft-valuation": "Microsoft (MSFT) Equity Research & Valuation",
+  "microsoft-msft-valuation": "MSFT Equity Research and Valuation",
   "nonprofit-growth-strategy": "Strategy Consultant, Hult",
   "salesforce-hackathon-agentforce": "Salesforce Agentforce Hack-a-thon",
 };
@@ -92,6 +92,7 @@ function parseProject(slug: string, raw: string): ProjectPage {
   const shortTitle = documentTitles[slug];
   if (!shortTitle) throw new Error(`Missing document title for ${slug}`);
   const documentTitle = `${shortTitle}${TITLE_SUFFIX}`;
+  const escapedTitleLength = documentTitle.replaceAll("&", "&amp;").length;
 
   const sourceSections = [...normalized.matchAll(/(?:^|\n)## ([^\n]+)\n([\s\S]*?)(?=\n## |$)/g)];
   if (sourceSections.length !== sections.length) {
@@ -106,8 +107,8 @@ function parseProject(slug: string, raw: string): ProjectPage {
     }
   });
 
-  if (documentTitle.length > 60) {
-    throw new Error(`Title too long (${documentTitle.length}) for ${slug}: ${documentTitle}`);
+  if (escapedTitleLength > 60) {
+    throw new Error(`Title too long (${escapedTitleLength}) for ${slug}: ${documentTitle}`);
   }
   if (description.length > 160 || !sentence.startsWith(description)) {
     throw new Error(`Description invalid for ${slug}`);
