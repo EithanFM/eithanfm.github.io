@@ -27,16 +27,6 @@ const downloadName = (file: string) => `Eithan-Flores-${file.replace(/\.pdf$/, "
                   >
                     Download
                   </a>
-                  {"verify" in item && item.verify ? (
-                    <a
-                      href={`https://www.coursera.org/verify/${item.verify}`}
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex min-h-11 items-center text-sm font-medium text-accent underline decoration-accent/35 underline-offset-4 hover:text-navy-soft hover:decoration-navy-soft"
-                    >
-                      Verify
-                    </a>
-                  ) : null}
                 </div>
               </li>
             ))}
