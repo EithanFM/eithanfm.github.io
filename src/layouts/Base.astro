@@ -46,6 +46,7 @@ const ogImage = new URL(site.ogImage, site.url).href;
     <meta name="twitter:image:alt" content={`${site.name}. ${site.headline}`} />
   </head>
   <body class="flex min-h-screen flex-col bg-paper font-sans text-base text-ink antialiased">
+    <div id="top" class="h-0" aria-hidden="true"></div>
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:inline-flex focus:min-h-11 focus:min-w-11 focus:items-center focus:bg-card focus:px-4 focus:text-navy"
