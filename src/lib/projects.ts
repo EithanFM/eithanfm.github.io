@@ -14,7 +14,7 @@ const documentTitles: Record<string, string> = {
   "korn-ferry-case-competition": "Korn Ferry Client Case Competition",
   "materials-startup-operations": "Operations Consultant, Hult",
   "microsoft-msft-valuation": "MSFT Equity Research and Valuation",
-  "nonprofit-growth-strategy": "Strategy Consultant, Hult",
+  "nonprofit-growth-strategy": "Strategy Consultant, The Possible Zone",
   "salesforce-hackathon-agentforce": "Salesforce Agentforce Hack-a-thon",
 };
 
