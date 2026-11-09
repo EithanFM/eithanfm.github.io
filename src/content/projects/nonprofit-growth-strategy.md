@@ -1,13 +1,13 @@
-Title: Strategy Consultant, Hult live client project (Boston-based youth nonprofit, anonymous)
+Title: Strategy Consultant, The Possible Zone: Evaluation for Potential Expansion (Hult live client project)
 Dates: Jun 2026
-Hult project: YES (MGT-0310 · Managing for Long-Term Success, live client; NDA)
-Publishable files: none (NDA; client materials stay private)
+Hult project: YES (MGT-0310 · Managing for Long-Term Success, live client)
+Publishable files: none (client materials stay private)
 
 ## Context
-In June 2026 I worked as Strategy Consultant on a Hult live client project for a Boston-based youth nonprofit. The engagement is under NDA, so the client is not named here.
+As part of a Hult live client project, I worked with The Possible Zone, a youth nonprofit, on an evaluation for potential expansion. The organization approved naming it here; the location, evaluation criteria and data it shared stay confidential.
 
 ## Question or thesis
-What growth strategy ideas could help the nonprofit scale in a way that fits its constraints, and how should those ideas be framed for senior leadership?
+How could The Possible Zone grow its impact while staying asset-light and true to its mission?
 
 ## Method
 I originated the growth strategy concept and led the primary and secondary research. My focus was strategy and research rather than the financials.
