@@ -1,17 +1,28 @@
 ---
-import { navigation, site } from "../data/site";
+import { getSite } from "../i18n/content";
+import { getUi, localeHome, localePath, type Locale } from "../i18n/ui";
+import { getNavigation } from "../i18n/content";
+
+const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
+const site = getSite(locale);
+const ui = getUi(locale);
+const navigation = getNavigation(locale);
+const currentPath = Astro.url.pathname || "/";
+const enHref = localePath("en", currentPath);
+const esHref = localePath("es", currentPath);
 ---
 
 <header class="sticky top-0 z-20 border-b border-line bg-card/95 shadow-[0_8px_24px_-18px_rgb(10_37_64/0.55)] backdrop-blur-md">
   <div class="h-0.5 bg-accent" aria-hidden="true"></div>
   <div class="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
     <a
-      href="/"
+      href={localeHome(locale)}
       class="flex min-h-11 items-center -my-2 font-serif text-lg tracking-tight text-navy transition-colors duration-150 hover:text-accent"
     >
       {site.name}
     </a>
-    <nav aria-label="Sections">
+    <div class="flex min-w-0 flex-wrap items-center justify-between gap-x-4 gap-y-2 md:justify-end">
+    <nav aria-label={ui.sectionsLabel}>
       <ul class="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-5">
         {
           navigation.map((item) => (
@@ -31,5 +42,29 @@ import { navigation, site } from "../data/site";
         }
       </ul>
     </nav>
+    <nav aria-label={ui.languageLabel} class="flex items-center">
+      <a
+        href={enHref}
+        hreflang="en"
+        lang="en"
+        aria-label={ui.english}
+        aria-current={locale === "en" ? "true" : undefined}
+        class="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-accent no-underline"
+      >
+        EN
+      </a>
+      <span aria-hidden="true" class="text-sm text-muted">|</span>
+      <a
+        href={esHref}
+        hreflang="es"
+        lang="es"
+        aria-label={ui.spanish}
+        aria-current={locale === "es" ? "true" : undefined}
+        class="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-accent no-underline"
+      >
+        ES
+      </a>
+    </nav>
+    </div>
   </div>
 </header>

@@ -1,4 +1,10 @@
-const rawFiles = import.meta.glob<string>("../content/projects/*.md", {
+const englishFiles = import.meta.glob<string>("../content/projects/*.md", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+const spanishFiles = import.meta.glob<string>("../content/es/projects/*.md", {
   query: "?raw",
   import: "default",
   eager: true,
@@ -45,7 +51,7 @@ function metaDescription(sentence: string) {
   return slice.slice(0, boundary).trimEnd();
 }
 
-function parseProject(slug: string, raw: string): ProjectPage {
+function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPage {
   const normalized = raw.replace(/\r\n/g, "\n").replace(/\n$/, "");
   const lines = normalized.split("\n");
   let title = "";
@@ -83,7 +89,9 @@ function parseProject(slug: string, raw: string): ProjectPage {
   }
   flushParagraph();
 
-  const context = sections.find((section) => section.heading === "Context");
+  const context = sections.find(
+    (section) => section.heading === "Context" || section.heading.endsWith(" Context"),
+  );
   if (!context || context.paragraphs.length === 0) {
     throw new Error(`Missing Context for ${slug}`);
   }
@@ -91,7 +99,8 @@ function parseProject(slug: string, raw: string): ProjectPage {
   const description = metaDescription(sentence);
   const shortTitle = documentTitles[slug];
   if (!shortTitle) throw new Error(`Missing document title for ${slug}`);
-  const documentTitle = `${shortTitle}${TITLE_SUFFIX}`;
+  const englishTitle = `${shortTitle}${TITLE_SUFFIX}`;
+  const documentTitle = locale === "es" ? `[ES PENDIENTE] ${englishTitle}` : englishTitle;
   const escapedTitleLength = documentTitle.replaceAll("&", "&amp;").length;
 
   const sourceSections = [...normalized.matchAll(/(?:^|\n)## ([^\n]+)\n([\s\S]*?)(?=\n## |$)/g)];
@@ -107,10 +116,10 @@ function parseProject(slug: string, raw: string): ProjectPage {
     }
   });
 
-  if (escapedTitleLength > 60) {
+  if (locale === "en" && escapedTitleLength > 60) {
     throw new Error(`Title too long (${escapedTitleLength}) for ${slug}: ${documentTitle}`);
   }
-  if (description.length > 160 || !sentence.startsWith(description)) {
+  if (locale === "en" && (description.length > 160 || !sentence.startsWith(description))) {
     throw new Error(`Description invalid for ${slug}`);
   }
   const renderedText = [title, dates, documentTitle, description, ...sections.flatMap((section) => [section.heading, ...section.paragraphs])].join("\n");
@@ -120,7 +129,7 @@ function parseProject(slug: string, raw: string): ProjectPage {
 
   return {
     slug,
-    href: `/projects/${slug}/`,
+    href: locale === "es" ? `/es/projects/${slug}/` : `/projects/${slug}/`,
     title,
     dates,
     documentTitle,
@@ -129,9 +138,20 @@ function parseProject(slug: string, raw: string): ProjectPage {
   };
 }
 
-export const projects: ProjectPage[] = Object.entries(rawFiles)
-  .map(([path, raw]) => {
-    const slug = path.split("/").pop()!.replace(/\.md$/, "");
-    return parseProject(slug, raw);
-  })
-  .sort((a, b) => a.slug.localeCompare(b.slug));
+function loadProjects(files: Record<string, string>, locale: "en" | "es") {
+  return Object.entries(files)
+    .map(([path, raw]) => {
+      const slug = path.split("/").pop()!.replace(/\.md$/, "");
+      return parseProject(slug, raw, locale);
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+export function getProjects(locale: "en" | "es") {
+  return locale === "es" ? spanishProjects : englishProjects;
+}
+
+const englishProjects = loadProjects(englishFiles, "en");
+const spanishProjects = loadProjects(spanishFiles, "es");
+
+export const projects = englishProjects;

@@ -1,8 +1,13 @@
 ---
-import { site } from "../data/site";
+import { getSite } from "../i18n/content";
+import { getUi, type Locale } from "../i18n/ui";
 import Section from "./Section.astro";
+
+const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
+const site = getSite(locale);
+const ui = getUi(locale);
 ---
 
-<Section id="skills" title="Skills">
+<Section id="skills" title={ui.skills}>
   <p class="max-w-3xl text-lg leading-relaxed">{site.skills}</p>
 </Section>
