@@ -11,7 +11,7 @@ En agosto de 2025 participé en el CME Group Derivatives Trading Challenge como 
 ¿Puede un enfoque de seguimiento de tendencia, basado en reglas, sobre un futuro líquido de un índice accionario producir un resultado claro y medible dentro de la ventana del desafío?
 
 ## Método
-Diseñé y ejecuté una estrategia de futuros de seguimiento de tendencia, centrada en los futuros del Russell 2000 (RTY). La estrategia se presentó ante el jurado como parte del desafío.
+Construí y ejecuté una estrategia de futuros de seguimiento de tendencia, centrada en los futuros del Russell 2000 (RTY). La estrategia se presentó ante el jurado como parte del desafío.
 
 ## Resultado
 La operación de futuros del Russell 2000 (RTY) obtuvo un ROI de +3.49%.

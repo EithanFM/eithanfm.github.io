@@ -604,7 +604,7 @@ ES: Método
 
 ## projectPage.cme-derivatives-trading-challenge.Method.paragraph.1
 EN: I built and executed a trend-following futures strategy focused on Russell 2000 (RTY) futures. The strategy was presented to the judging panel as part of the challenge.
-ES: Diseñé y ejecuté una estrategia de futuros de seguimiento de tendencia, centrada en los futuros del Russell 2000 (RTY). La estrategia se presentó ante el jurado como parte del desafío.
+ES: Construí y ejecuté una estrategia de futuros de seguimiento de tendencia, centrada en los futuros del Russell 2000 (RTY). La estrategia se presentó ante el jurado como parte del desafío.
 
 ## projectPage.cme-derivatives-trading-challenge.section.Result
 EN: Result
@@ -684,7 +684,7 @@ ES: Contexto
 
 ## projectPage.materials-startup-operations.Context.paragraph.1
 EN: From March to April 2026 I worked on a Hult class project for a live client, AeroShield, an advanced-materials startup, as part of MGT-0200 (Operations & Supply Chain Management). My role was Operations Consultant within a student team; I did not work for AeroShield.
-ES: De marzo a abril de 2026 trabajé en un proyecto de clase de Hult para un cliente real, AeroShield, una startup de materiales avanzados, como parte de MGT-0200 (Operations & Supply Chain Management). Mi rol fue Operations Consultant dentro de un equipo estudiantil; no trabajé para AeroShield.
+ES: De marzo a abril de 2026 trabajé en un proyecto de clase de Hult para un cliente real, AeroShield, una startup de materiales avanzados, como parte de MGT-0200 (Operations & Supply Chain Management). Mi rol fue de consultor de operaciones dentro de un equipo estudiantil; no trabajé para AeroShield.
 
 ## projectPage.materials-startup-operations.section.Question or thesis
 EN: Question or thesis

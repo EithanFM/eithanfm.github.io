@@ -5,7 +5,7 @@ Hult project: YES (MGT-0200 · Operations & Supply Chain Management, class proje
 Publishable files: none (client materials stay private)
 
 ## Contexto
-De marzo a abril de 2026 trabajé en un proyecto de clase de Hult para un cliente real, AeroShield, una startup de materiales avanzados, como parte de MGT-0200 (Operations & Supply Chain Management). Mi rol fue Operations Consultant dentro de un equipo estudiantil; no trabajé para AeroShield.
+De marzo a abril de 2026 trabajé en un proyecto de clase de Hult para un cliente real, AeroShield, una startup de materiales avanzados, como parte de MGT-0200 (Operations & Supply Chain Management). Mi rol fue de consultor de operaciones dentro de un equipo estudiantil; no trabajé para AeroShield.
 
 ## Pregunta o tesis
 ¿Qué métricas operativas debería seguir primero la planta piloto de AeroShield, y dónde están los cuellos de botella que mantienen su producción por debajo de la meta?
