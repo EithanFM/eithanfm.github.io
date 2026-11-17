@@ -1,10 +1,10 @@
-Title: Operations Consultant (Student Team), AeroShield Class Project
+Title: Operations Consultant (Student Team), AeroShield (Class Project, Live Client)
 Dates: Mar to Apr 2026
-Hult project: YES (MGT-0200 · Operations & Supply Chain Management, class project presented by AeroShield)
+Hult project: YES (MGT-0200 · Operations & Supply Chain Management, class project for a live client, AeroShield)
 Publishable files: none (client materials stay private)
 
 ## Context
-From March to April 2026 I worked on a Hult class project presented by AeroShield, an advanced-materials startup, as part of MGT-0200 (Operations & Supply Chain Management). My role was Operations Consultant within a student team; I did not work for AeroShield.
+From March to April 2026 I worked on a Hult class project for a live client, AeroShield, an advanced-materials startup, as part of MGT-0200 (Operations & Supply Chain Management). My role was Operations Consultant within a student team; I did not work for AeroShield.
 
 ## Question or thesis
 Which operating metrics should AeroShield's pilot plant track first, and where are the bottlenecks that keep its output below target?
