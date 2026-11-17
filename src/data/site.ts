@@ -17,7 +17,7 @@ export const site = {
   },
   about: [
     "I'm a BBA student at Hult International Business School (Boston campus, Cambridge, MA), concentrating in Finance and Management (expected May 2028). Originally from Córdoba, Mexico, I work in English, Spanish and French.",
-    "My work so far sits where finance meets strategy: I've built a DCF valuation of Microsoft, traded futures in the CME Group Derivatives Trading Challenge, and worked on live client projects for The Possible Zone, an advanced-materials startup and a Korn Ferry case competition. I'm especially interested in using data and AI to make better business decisions, and I plan to continue into a Master in Business Analytics.",
+    "My work so far sits where finance meets strategy: I've built a DCF valuation of Microsoft, traded futures in the CME Group Derivatives Trading Challenge, and worked on live client projects for The Possible Zone and AeroShield, plus a Korn Ferry case competition. I'm especially interested in using data and AI to make better business decisions, and I plan to continue into a Master in Business Analytics.",
   ],
   cv: {
     label: "Download CV",
@@ -46,11 +46,11 @@ export const site = {
         "Led research on ESG, impact measurement and sustainability indicators for The Possible Zone and presented a phased growth strategy to its senior leadership.",
     },
     {
-      title: "Operations Consultant, Hult live client project",
+      title: "Operations Consultant, AeroShield (Class Project, Live Client)",
       dates: "Mar to Apr 2026",
       href: "/projects/materials-startup-operations/",
       description:
-        "Helped build an operations KPI dashboard and analyze production bottlenecks for an advanced-materials startup.",
+        "Built operations KPIs and supported a capacity and bottleneck analysis in a Hult class project for AeroShield, an advanced-materials startup.",
     },
     {
       title: "Korn Ferry, Client Case Competition",

@@ -1,19 +1,19 @@
-Title: Operations Consultant, Hult live client project (advanced-materials startup, anonymous)
+Title: Operations Consultant (Student Team), AeroShield (Class Project, Live Client)
 Dates: Mar to Apr 2026
-Hult project: YES (MGT-0200 · Operations & Supply Chain Management, live client / capstone; NDA)
-Publishable files: none (NDA; client materials stay private)
+Hult project: YES (MGT-0200 · Operations & Supply Chain Management, class project for a live client, AeroShield)
+Publishable files: none (client materials stay private)
 
 ## Context
-From March to April 2026 I worked as Operations Consultant on a Hult live client project for an advanced-materials startup. The engagement is under NDA, so the client is not named here.
+From March to April 2026 I worked on a Hult class project for a live client, AeroShield, an advanced-materials startup, as part of MGT-0200 (Operations & Supply Chain Management). My role was Operations Consultant within a student team; I did not work for AeroShield.
 
 ## Question or thesis
-Which operating metrics should the team track first, and where do production bottlenecks sit in the process?
+Which operating metrics should AeroShield's pilot plant track first, and where are the bottlenecks that keep its output below target?
 
 ## Method
-I defined and built the first four KPIs of the team's operations dashboard. I also helped analyze production bottlenecks.
+I defined and built the first four KPIs of the team's operations dashboard, tracking throughput and cycle time. I also supported the team's Excel capacity model and process map to size the pilot plant's output gap and locate its bottlenecks.
 
 ## Result
-The dashboard's first four KPIs were defined and built for the team. Bottleneck analysis supported the operations discussion with the client. This page does not publish output figures, capacity gaps, or client decisions.
+The team presented its findings and recommendations to AeroShield and received positive feedback on the presentation. This page does not publish output figures, capacity data or client decisions.
 
 ## Skills and tools
-Operations KPIs; Excel; process and bottleneck analysis; live client collaboration.
+Operations KPIs; Excel capacity modeling; process mapping and bottleneck analysis; client presentation; teamwork.
