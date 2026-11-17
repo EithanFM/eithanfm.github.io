@@ -87,6 +87,8 @@ export const site = {
     {
       title: "The Refining Chokepoint, U.S. AI Supply Chain Vulnerability",
       dates: "Jun 2026 (report dated Jun 16, 2026)",
+      description:
+        "Analyzed refining as the AI minerals supply chain chokepoint in a Hormuz closure scenario; wrote the team's recommendations.",
       href: "/projects/global-crises-ai-minerals/",
     },
   ],
