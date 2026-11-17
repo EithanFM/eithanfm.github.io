@@ -4,35 +4,100 @@ import Section from "./Section.astro";
 
 const certificateHref = (file: string) => `${import.meta.env.BASE_URL}certificates/${file}`;
 const downloadName = (file: string) => `Eithan-Flores-${file.replace(/\.pdf$/, "")}.pdf`;
+
+const featuredFiles = [
+  "forage-bofa-sales-trading.pdf",
+  "forage-ny-jobs-financial-analyst.pdf",
+  "datacamp-official-statistics-fundamentals-track.pdf",
+  "claude-academy-claude-101.pdf",
+  "claude-academy-claude-code-in-action.pdf",
+] as const;
+
+const byFile = new Map(
+  site.certificateGroups.flatMap((group) => group.items.map((item) => [item.file, item] as const)),
+);
+
+const featured = featuredFiles.map((file) => {
+  const item = byFile.get(file);
+  if (!item || !("featured" in item) || !item.featured) {
+    throw new Error(`Missing featured certificate: ${file}`);
+  }
+  return item;
+});
+
+const total = site.certificateGroups.reduce((count, group) => count + group.items.length, 0);
 ---
 
 <Section id="certificates" title="Certificates">
-  <div class="space-y-12">
+  <ul class="divide-y divide-line border-y border-line">
     {
-      site.certificateGroups.map((group) => (
-        <div>
-          <h3 class="font-serif text-2xl font-medium tracking-tight text-navy">{group.heading}</h3>
-          <ul class="mt-5 divide-y divide-line border-y border-line">
-            {group.items.map((item) => (
-              <li class="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-                <div class="min-w-0">
-                  <p class="font-medium text-navy text-balance">{item.title}</p>
-                  <p class="mt-1 text-sm leading-6 text-ink">{item.issuer} · {item.date}</p>
-                </div>
-                <div class="flex shrink-0 flex-wrap items-center gap-x-4 gap-y-1">
-                  <a
-                    href={certificateHref(item.file)}
-                    download={downloadName(item.file)}
-                    class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
-                  >
-                    Download
-                  </a>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+      featured.map((item) => (
+        <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <div class="min-w-0">
+            <p class="font-medium text-navy text-balance">{item.title}</p>
+            <p class="mt-1 text-sm leading-6 text-ink">{item.issuer} · {item.date}</p>
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center">
+            <a
+              href={certificateHref(item.file)}
+              download={downloadName(item.file)}
+              class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
+            >
+              Download
+            </a>
+          </div>
+        </li>
       ))
     }
-  </div>
+  </ul>
+  <details class="mt-8">
+    <summary
+      class="inline-flex min-h-11 max-w-full cursor-pointer list-none items-center border border-accent bg-card px-4 text-sm font-medium text-accent [&::-webkit-details-marker]:hidden"
+    >
+      <span class="see-all">See all ({total})</span>
+      <span class="show-fewer">Show fewer</span>
+    </summary>
+    <div class="mt-8 space-y-12">
+      {
+        site.certificateGroups.map((group) => (
+          <div>
+            <h3 class="font-serif text-2xl font-medium tracking-tight text-navy">{group.heading}</h3>
+            <ul class="mt-5 divide-y divide-line border-y border-line">
+              {group.items.map((item) => (
+                <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                  <div class="min-w-0">
+                    <p class="font-medium text-navy text-balance">{item.title}</p>
+                    <p class="mt-1 text-sm leading-6 text-ink">{item.issuer} · {item.date}</p>
+                  </div>
+                  <div class="flex shrink-0 flex-wrap items-center">
+                    <a
+                      href={certificateHref(item.file)}
+                      download={downloadName(item.file)}
+                      class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </details>
 </Section>
+
+<style>
+  .show-fewer {
+    display: none;
+  }
+
+  details[open] .see-all {
+    display: none;
+  }
+
+  details[open] .show-fewer {
+    display: inline;
+  }
+</style>
