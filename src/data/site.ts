@@ -94,6 +94,17 @@ export const site = {
     "Excel financial modeling (DCF, WACC, sensitivity, comps) · Python (basic) · SQL (basic) · PowerPoint · Canva",
   certificateGroups: [
     {
+      heading: "Claude Academy",
+      items: [
+        {
+          title: "Claude 101",
+          issuer: "Anthropic (Claude Academy)",
+          date: "Nov 2026",
+          file: "claude-academy-claude-101.pdf",
+        },
+      ],
+    },
+    {
       heading: "Forage",
       items: [
         {
