@@ -98,7 +98,7 @@ ES: Eithan Flores
 
 ## site.description
 EN: Finance & Management student at Hult International Business School in Cambridge, MA, building skills in valuation, markets and strategy consulting.
-ES: Estudiante de Finance & Management en Hult International Business School en Cambridge, MA, desarrollando habilidades en valuación, mercados y consultoría de estrategia.
+ES: Estudiante de Finance & Management en Hult International Business School (Cambridge, MA), con enfoque en valuación, mercados y consultoría de estrategia.
 
 ## about.paragraph.1
 EN: I'm a BBA student at Hult International Business School (Boston campus, Cambridge, MA), concentrating in Finance and Management (expected May 2028). Originally from Córdoba, Mexico, I work in English, Spanish and French.
