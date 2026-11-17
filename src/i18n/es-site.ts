@@ -1,6 +1,6 @@
 export const esSite = {
   headline: "Estudiante de Finance & Management en Hult International Business School (campus de Boston, Cambridge, MA), desarrollando habilidades en valuación, mercados y consultoría de estrategia.",
-  description: "Estudiante de Finance & Management en Hult International Business School en Cambridge, MA, desarrollando habilidades en valuación, mercados y consultoría de estrategia.",
+  description: "Estudiante de Finance & Management en Hult International Business School (Cambridge, MA), con enfoque en valuación, mercados y consultoría de estrategia.",
   photoAlt: "Retrato de Eithan Flores",
   cvLabel: "Descargar CV",
   name: "Eithan Flores",
