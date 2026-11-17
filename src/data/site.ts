@@ -102,6 +102,12 @@ export const site = {
           date: "Nov 2026",
           file: "claude-academy-claude-101.pdf",
         },
+        {
+          title: "Claude Code in Action",
+          issuer: "Anthropic (Claude Academy)",
+          date: "Nov 2026",
+          file: "claude-academy-claude-code-in-action.pdf",
+        },
       ],
     },
     {
