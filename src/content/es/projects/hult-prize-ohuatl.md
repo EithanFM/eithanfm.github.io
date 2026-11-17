@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] Hult Prize, Ohuatl
-Dates: [ES PENDIENTE] Sep 2025 to Feb 2026
+Title: Hult Prize, Ohuatl
+Dates: sep 2025 a feb 2026
+Document title: Hult Prize, Ohuatl | Eithan Flores
 Hult project: YES (Hult Prize pathway; linked to MGT-0100 · Leadership & Organizational Behavior A0 Framework)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] From September 2025 to February 2026 I participated in the Hult Prize at Hult International Business School. Our venture concept, Ohuatl, addressed textile waste through a circular fashion solution aligned with UN SDGs 12 and 13.
+## Contexto
+De septiembre de 2025 a febrero de 2026 participé en el Hult Prize en Hult International Business School. Nuestro concepto de emprendimiento, Ohuatl, abordó el desperdicio textil con una solución de moda circular alineada con los ODS 12 y 13 de la ONU.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] Given the scale of global textile waste (UN SDG-aligned problem framing), is there a viable circular fashion model for the Mexican market, and what demand and growth evidence support it?
+## Pregunta o tesis
+Dada la escala del desperdicio textil global (planteamiento del problema alineado con los ODS de la ONU), ¿existe un modelo viable de moda circular para el mercado mexicano, y qué evidencia de demanda y crecimiento lo respalda?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I co-developed Ohuatl as a circular fashion solution and helped validate the opportunity with market research focused on Mexico. The work covered industry growth, consumer interest, and market size trajectories.
+## Método
+Co-desarrollé Ohuatl como una solución de moda circular y ayudé a validar la oportunidad con investigación de mercado centrada en México. El trabajo cubrió el crecimiento de la industria, el interés de los consumidores y las trayectorias de tamaño de mercado.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] We validated industry growth, consumer interest in Mexico, and a multi-year market-size trajectory using primary and secondary research. That evidence framed the venture case for the Hult Prize process.
+## Resultado
+Validamos el crecimiento de la industria, el interés de los consumidores en México y una trayectoria plurianual del tamaño de mercado, con investigación primaria y secundaria. Esa evidencia estructuró el caso del emprendimiento para el proceso del Hult Prize.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Market research; sustainability and circular economy framing; venture pitch development; PowerPoint; teamwork.
+## Habilidades y herramientas
+Investigación de mercado; planteamiento de sostenibilidad y economía circular; desarrollo del pitch del emprendimiento; PowerPoint; trabajo en equipo.

@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] Korn Ferry Client Case Competition
-Dates: [ES PENDIENTE] Apr 2026
+Title: Korn Ferry Client Case Competition
+Dates: abr 2026
+Document title: Korn Ferry Client Case Competition | Eithan Flores
 Hult project: YES (STR-0200; Hult International Business School)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] In April 2026 I competed in the Korn Ferry Client Case Competition at Hult (STR-0200). Our five-person team proposed an AI client intelligence and performance management platform to a judging panel.
+## Contexto
+En abril de 2026 competí en la Korn Ferry Client Case Competition en Hult (STR-0200). Nuestro equipo de cinco personas propuso una plataforma de inteligencia de clientes y gestión del desempeño con IA ante un jurado.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] How should a professional services firm implement an AI client-intelligence platform in phases, with governance that keeps humans in control?
+## Pregunta o tesis
+¿Cómo debería una firma de servicios profesionales implementar por fases una plataforma de inteligencia de clientes con IA, con un gobierno que mantenga a los humanos en control?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I built the three-phase implementation roadmap: CRM data integration; AI dashboards and recommendations; global scale-up. The roadmap included governance controls for secure access, human review, and phased rollout. I presented the conclusion and the business case to the judging panel.
+## Método
+Elaboré la hoja de ruta de implementación en tres fases: integración de datos del CRM; tableros y recomendaciones de IA; escalamiento global. La hoja de ruta incluyó controles de gobernanza para el acceso seguro, la revisión humana y un despliegue por fases. Presenté la conclusión y el caso de negocio ante el jurado.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] We delivered a complete platform proposal and implementation roadmap to the judges. I owned the roadmap and the closing business case.
+## Resultado
+Entregamos al jurado una propuesta completa de plataforma y una hoja de ruta de implementación. La hoja de ruta y el caso de negocio de cierre estuvieron a mi cargo.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Implementation roadmapping; AI product framing for consulting clients; governance design; PowerPoint; team case presentation.
+## Habilidades y herramientas
+Diseño de hojas de ruta de implementación; planteamiento de producto de IA para clientes de consultoría; diseño de gobernanza; PowerPoint; presentación de caso en equipo.

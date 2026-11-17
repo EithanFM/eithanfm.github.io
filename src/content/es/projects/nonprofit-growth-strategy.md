@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] Strategy Consultant, The Possible Zone: Evaluation for Potential Expansion (Hult live client project)
-Dates: [ES PENDIENTE] Jun 2026
+Title: Consultor de estrategia, The Possible Zone: Evaluation for Potential Expansion (proyecto con cliente real de Hult)
+Dates: jun 2026
+Document title: Consultor de estrategia, The Possible Zone | Eithan Flores
 Hult project: YES (MGT-0310 · Managing for Long-Term Success, live client)
 Publishable files: none (client materials stay private)
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] As part of a Hult live client project, I worked with The Possible Zone, a youth nonprofit, on an evaluation for potential expansion. The organization approved naming it here; the location, evaluation criteria and data it shared stay confidential.
+## Contexto
+Como parte de un proyecto con cliente real de Hult, trabajé con The Possible Zone, una organización sin fines de lucro para jóvenes, en una evaluación para una posible expansión. La organización autorizó nombrarla aquí; la ubicación, los criterios de evaluación y los datos que compartió permanecen confidenciales.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] How could The Possible Zone grow its impact while staying asset-light and true to its mission?
+## Pregunta o tesis
+¿Cómo podría The Possible Zone aumentar su impacto sin dejar de ser asset-light y fiel a su misión?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I originated the growth strategy concept and led the primary and secondary research. My focus was strategy and research rather than the financials.
+## Método
+Originé el concepto de la estrategia de crecimiento y lideré la investigación primaria y secundaria. Mi enfoque fue la estrategia y la investigación, no los aspectos financieros.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] I presented growth strategy ideas to the client's senior leadership. This page does not claim adoption, approval, or any client decision.
+## Resultado
+Presenté ideas de estrategia de crecimiento a la alta dirección del cliente. Esta página no afirma que haya habido adopción, aprobación ni ninguna decisión del cliente.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Strategy research; structuring and presenting recommendations to senior leadership; teamwork on a live client brief.
+## Habilidades y herramientas
+Investigación de estrategia; estructuración y presentación de recomendaciones a la alta dirección; trabajo en equipo en un brief de cliente real.

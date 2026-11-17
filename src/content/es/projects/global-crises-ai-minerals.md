@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] The Refining Chokepoint, U.S. AI Supply Chain Vulnerability
-Dates: [ES PENDIENTE] Jun 2026 (report dated Jun 16, 2026)
+Title: El cuello de botella de la refinación, vulnerabilidad de la cadena de suministro de IA en EE. UU.
+Dates: jun 2026 (informe con fecha del 16 de junio de 2026)
+Document title: El cuello de botella de la refinación | Eithan Flores
 Hult project: YES (GED-0315 · Global Crises)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] In June 2026 I co-authored a team policy report for GED-0315 (Global Crises) at Hult International Business School. The report assessed refining and processing as the midstream chokepoint in the U.S. AI minerals supply chain under a Strait of Hormuz disruption scenario. I authored the recommendations section and contributed to the conclusion.
+## Contexto
+En junio de 2026 fui coautor de un informe de política del equipo para GED-0315 (Global Crises) en Hult International Business School. El informe evaluó la refinación y el procesamiento como el cuello de botella midstream en la cadena de suministro de minerales para IA de EE. UU., bajo un escenario de disrupción en el estrecho de Ormuz. Redacté la sección de recomendaciones y contribuí a la conclusión.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] If the Strait of Hormuz closed, how would energy, import, and logistics shocks hit U.S. refining of AI-critical inputs, and what policy and industry response would close the midstream capacity gap?
+## Pregunta o tesis
+Si se cerrara el estrecho de Ormuz, ¿cómo afectarían los choques de energía, importaciones y logística a la refinación en EE. UU. de insumos críticos para la IA, y qué respuesta de política e industria cerraría la brecha de capacidad midstream?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] As a team we mapped the midstream segment from mining through refining to chips, hardware, and data centers, identified import dependence on Chinese refining as the primary vulnerability, traced transmission pathways from a Hormuz disruption, and outlined an early-warning dashboard. My section set short-term and long-term recommendations for government and industry: stockpile drawdowns of refined products, Defense Production Act Title III support for domestic plants, Minerals Security Partnership coordination with allies, FAST-41 permitting acceleration, multi-month refined inventories, supplier diversification, and advanced recycling from e-waste and end-of-life magnets.
+## Método
+En equipo mapeamos el segmento midstream, desde la minería y la refinación hasta chips, hardware y centros de datos; identificamos la dependencia de importaciones de la refinación china como la vulnerabilidad principal; rastreamos las vías de transmisión de una disrupción en Ormuz; y esbozamos un tablero de alerta temprana. Mi sección estableció recomendaciones de corto y largo plazo para el gobierno y la industria: liberación de reservas de productos refinados, apoyo del Defense Production Act Title III a plantas nacionales, coordinación con aliados en el Minerals Security Partnership, aceleración de permisos FAST-41, inventarios refinados de varios meses, diversificación de proveedores y reciclaje avanzado a partir de residuos electrónicos e imanes al final de su vida útil.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] We delivered a group report (dated June 16, 2026) and supporting decks. The core finding was that U.S. AI hardware depends on refining chokepoints the country does not control, so short-term shock response only works if it funds lasting midstream capacity at home and with allies. No report file is published here (team deliverable).
+## Resultado
+Entregamos un informe grupal (con fecha del 16 de junio de 2026) y decks de apoyo. El hallazgo central fue que el hardware de IA de EE. UU. depende de cuellos de botella de refinación que el país no controla, así que la respuesta de corto plazo a un choque solo funciona si financia capacidad midstream duradera en el país y con aliados. Aquí no se publica el archivo del informe (entregable del equipo).
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Geopolitical risk and supply-chain analysis; critical-minerals policy research; phased recommendation design (short-term buffers into long-term midstream capacity); Word; PowerPoint; teamwork on a timed final project.
+## Habilidades y herramientas
+Análisis de riesgo geopolítico y de cadena de suministro; investigación de política de minerales críticos; diseño de recomendaciones por fases (buffers de corto plazo hacia capacidad midstream de largo plazo); Word; PowerPoint; trabajo en equipo en un proyecto final con tiempo limitado.

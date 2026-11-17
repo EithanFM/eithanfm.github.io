@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] Operations Consultant (Student Team), AeroShield (Class Project, Live Client)
-Dates: [ES PENDIENTE] Mar to Apr 2026
+Title: Consultor de operaciones (equipo estudiantil), AeroShield (proyecto de clase, cliente real)
+Dates: mar a abr 2026
+Document title: Proyecto de clase de AeroShield, Hult | Eithan Flores
 Hult project: YES (MGT-0200 · Operations & Supply Chain Management, class project for a live client, AeroShield)
 Publishable files: none (client materials stay private)
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] From March to April 2026 I worked on a Hult class project for a live client, AeroShield, an advanced-materials startup, as part of MGT-0200 (Operations & Supply Chain Management). My role was Operations Consultant within a student team; I did not work for AeroShield.
+## Contexto
+De marzo a abril de 2026 trabajé en un proyecto de clase de Hult para un cliente real, AeroShield, una startup de materiales avanzados, como parte de MGT-0200 (Operations & Supply Chain Management). Mi rol fue Operations Consultant dentro de un equipo estudiantil; no trabajé para AeroShield.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] Which operating metrics should AeroShield's pilot plant track first, and where are the bottlenecks that keep its output below target?
+## Pregunta o tesis
+¿Qué métricas operativas debería seguir primero la planta piloto de AeroShield, y dónde están los cuellos de botella que mantienen su producción por debajo de la meta?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I defined and built the first four KPIs of the team's operations dashboard, tracking throughput and cycle time. I also supported the team's Excel capacity model and process map to size the pilot plant's output gap and locate its bottlenecks.
+## Método
+Definí y elaboré los primeros cuatro KPIs del tablero de operaciones del equipo, que dan seguimiento a throughput y cycle time. También apoyé el modelo de capacidad en Excel y el mapa de procesos del equipo para dimensionar la brecha de producción de la planta piloto y localizar sus cuellos de botella.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] The team presented its findings and recommendations to AeroShield and received positive feedback on the presentation. This page does not publish output figures, capacity data or client decisions.
+## Resultado
+El equipo presentó sus hallazgos y recomendaciones a AeroShield y recibió comentarios positivos sobre la presentación. Esta página no publica cifras de producción, datos de capacidad ni decisiones del cliente.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Operations KPIs; Excel capacity modeling; process mapping and bottleneck analysis; client presentation; teamwork.
+## Habilidades y herramientas
+KPIs de operaciones; modelado de capacidad en Excel; mapeo de procesos y análisis de cuellos de botella; presentación ante el cliente; trabajo en equipo.

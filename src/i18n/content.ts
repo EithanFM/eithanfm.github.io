@@ -1,10 +1,13 @@
 import { site } from "../data/site";
+import { esSite } from "./es-site";
 import { getUi, type Locale } from "./ui";
 
-const MARK = "[ES PENDIENTE]";
-
-function mark(value: string) {
-  return `${MARK} ${value}`;
+function projectSlug(project: (typeof site.projects)[number]) {
+  if ("href" in project && project.href) {
+    const parts = project.href.split("/").filter(Boolean);
+    return parts[parts.length - 1] ?? "";
+  }
+  return "cohort-captain";
 }
 
 export function getSite(locale: Locale) {
@@ -12,25 +15,29 @@ export function getSite(locale: Locale) {
 
   return {
     ...site,
-    headline: mark(site.headline),
-    description: mark(site.description),
-    about: site.about.map(mark),
-    skills: mark(site.skills),
+    name: esSite.name,
+    title: esSite.title,
+    headline: esSite.headline,
+    description: esSite.description,
+    about: [...esSite.about],
+    skills: esSite.skills,
     photo: {
       ...site.photo,
-      alt: mark(site.photo.alt),
+      alt: esSite.photoAlt,
     },
     cv: {
-      label: mark(site.cv.label),
+      label: esSite.cvLabel,
     },
-    projects: site.projects.map((project) => ({
-      ...project,
-      title: mark(project.title),
-      dates: mark(project.dates),
-      description: "description" in project && project.description ? mark(project.description) : undefined,
-      note: "note" in project && project.note ? mark(project.note) : undefined,
-      href: "href" in project && project.href ? `/es${project.href}` : undefined,
-    })),
+    projects: site.projects.map((project) => {
+      const slug = projectSlug(project);
+      const copy = esSite.projects[slug as keyof typeof esSite.projects];
+      if (!copy) throw new Error(`Missing Spanish project copy: ${slug}`);
+      const translated = { ...project, ...copy };
+      if ("href" in project && project.href) {
+        return { ...translated, href: `/es${project.href}` };
+      }
+      return translated;
+    }),
   };
 }
 

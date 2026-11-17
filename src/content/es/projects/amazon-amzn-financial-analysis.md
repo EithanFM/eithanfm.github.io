@@ -1,21 +1,22 @@
-Title: [ES PENDIENTE] Amazon (AMZN) Financial Analysis 2020 to 2025
-Dates: [ES PENDIENTE] Feb to Apr 2025
+Title: Análisis financiero de Amazon (AMZN), 2020 a 2025
+Dates: feb a abr 2025
+Document title: Análisis financiero de Amazon (AMZN) | Eithan Flores
 Hult project: YES (FIN-1, individual coursework)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] From February to April 2025 I completed an individual financial analysis of Amazon (AMZN) covering 2020 to 2025 as FIN-1 coursework at Hult International Business School. The project used public SEC filings as the primary source.
+## Contexto
+De febrero a abril de 2025 realicé un análisis financiero individual de Amazon (AMZN) que cubre 2020 a 2025, como trabajo de FIN-1 en Hult International Business School. El proyecto usó SEC filings públicos como fuente principal.
 
-[ES PENDIENTE] Academic project, not investment advice.
+Proyecto académico, no es asesoría de inversión.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] How did Amazon's financial position and performance evolve over six years, and what growth trends follow from that history?
+## Pregunta o tesis
+¿Cómo evolucionaron la posición y el desempeño financieros de Amazon a lo largo de seis años, y qué tendencias de crecimiento se desprenden de esa historia?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I analyzed six years of SEC filings across revenue, net income, assets, liabilities, and equity. I organized the series into growth trends and prepared recommendations for presentation.
+## Método
+Analicé seis años de SEC filings en ingresos, utilidad neta, activos, pasivos y capital contable. Organicé la serie en tendencias de crecimiento y preparé recomendaciones para la presentación.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] I presented the growth trends and recommendations based on the six-year filing review.
+## Resultado
+Presenté las tendencias de crecimiento y las recomendaciones a partir de la revisión de filings de seis años.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] SEC filing analysis; financial statement review; Excel; presentation of trends and recommendations.
+## Habilidades y herramientas
+Análisis de SEC filings; revisión de estados financieros; Excel; presentación de tendencias y recomendaciones.

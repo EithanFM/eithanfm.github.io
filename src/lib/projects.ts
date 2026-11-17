@@ -56,6 +56,7 @@ function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPa
   const lines = normalized.split("\n");
   let title = "";
   let dates = "";
+  let documentTitleOverride = "";
   const sections: ProjectSection[] = [];
   let current: ProjectSection | null = null;
   let paragraph: string[] = [];
@@ -79,6 +80,7 @@ function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPa
     if (!current) {
       if (line.startsWith("Title: ")) title = line.slice("Title: ".length);
       else if (line.startsWith("Dates: ")) dates = line.slice("Dates: ".length);
+      else if (line.startsWith("Document title: ")) documentTitleOverride = line.slice("Document title: ".length);
       continue;
     }
     if (line === "") {
@@ -90,7 +92,7 @@ function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPa
   flushParagraph();
 
   const context = sections.find(
-    (section) => section.heading === "Context" || section.heading.endsWith(" Context"),
+    (section) => section.heading === "Context" || section.heading === "Contexto",
   );
   if (!context || context.paragraphs.length === 0) {
     throw new Error(`Missing Context for ${slug}`);
@@ -100,7 +102,10 @@ function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPa
   const shortTitle = documentTitles[slug];
   if (!shortTitle) throw new Error(`Missing document title for ${slug}`);
   const englishTitle = `${shortTitle}${TITLE_SUFFIX}`;
-  const documentTitle = locale === "es" ? `[ES PENDIENTE] ${englishTitle}` : englishTitle;
+  if (locale === "es" && !documentTitleOverride) {
+    throw new Error(`Missing Spanish document title for ${slug}`);
+  }
+  const documentTitle = documentTitleOverride || englishTitle;
   const escapedTitleLength = documentTitle.replaceAll("&", "&amp;").length;
 
   const sourceSections = [...normalized.matchAll(/(?:^|\n)## ([^\n]+)\n([\s\S]*?)(?=\n## |$)/g)];
@@ -123,7 +128,7 @@ function parseProject(slug: string, raw: string, locale: "en" | "es"): ProjectPa
     throw new Error(`Description invalid for ${slug}`);
   }
   const renderedText = [title, dates, documentTitle, description, ...sections.flatMap((section) => [section.heading, ...section.paragraphs])].join("\n");
-  if (/[—–]|&mdash;|&ndash;|&#8212;|&#8211;/.test(renderedText)) {
+  if (/\u2014|\u2013|&mdash;|&ndash;|&#8212;|&#8211;/.test(renderedText)) {
     throw new Error(`Dash found in ${slug}`);
   }
 

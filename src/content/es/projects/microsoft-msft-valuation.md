@@ -1,21 +1,22 @@
-Title: [ES PENDIENTE] Microsoft (MSFT) Equity Research & Valuation
-Dates: [ES PENDIENTE] Sep to Dec 2025
+Title: Equity Research y valuación de Microsoft (MSFT)
+Dates: sep a dic 2025
+Document title: Equity Research y valuación de MSFT | Eithan Flores
 Hult project: YES (FIN-0300 Corporate Finance course project)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] This was my Corporate Finance (FIN-0300) equity research project at Hult International Business School. I valued Microsoft (MSFT) as a student analyst building a full investment case from public filings and market data.
+## Contexto
+Este fue mi proyecto de equity research de Corporate Finance (FIN-0300) en Hult International Business School. Valué Microsoft (MSFT) como analista estudiantil, elaborando un caso de inversión completo a partir de filings públicos y datos de mercado.
 
-[ES PENDIENTE] Academic project, not investment advice.
+Proyecto académico, no es asesoría de inversión.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] Is MSFT fairly valued at the then current market price, and what target price and recommendation follow from a disciplined DCF plus comps framework?
+## Pregunta o tesis
+¿Está MSFT valuado de forma razonable al precio de mercado de ese momento, y qué precio objetivo y recomendación se desprenden de un marco disciplinado de DCF más comps?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I built a three-stage discounted cash flow model in Excel: forecasted the financial statements, derived WACC, and ran sensitivity analysis alongside comparable company multiples. The investment case also covered subscription revenue drivers, the AI and Copilot competitive edge, a risk matrix, and an ESG review.
+## Método
+Construí un modelo DCF de tres etapas en Excel: proyecté los estados financieros, derivé el WACC y realicé un análisis de sensibilidad junto con múltiplos de empresas comparables. El caso de inversión también cubrió los motores de ingresos por suscripción, la ventaja competitiva de la IA y Copilot, una matriz de riesgos y una revisión de ESG.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] I delivered a formal SELL recommendation with a $134.57 target price, implying about 72% downside from $485.50 at the time of the analysis. The conclusion rested on the DCF base case, supported by the qualitative drivers and risk work above.
+## Resultado
+Entregué una recomendación formal de SELL con un precio objetivo de $134.57, lo que implica un potencial a la baja de alrededor del 72% desde $485.50 al momento del análisis. La conclusión se basó en el caso base del DCF, respaldada por los factores cualitativos y el trabajo de riesgos descritos arriba.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Excel financial modeling (DCF, WACC, sensitivity analysis, comps); PowerPoint; Word; public company filings and market data.
+## Habilidades y herramientas
+Modelado financiero en Excel (DCF, WACC, análisis de sensibilidad, comps); PowerPoint; Word; filings de empresas públicas y datos de mercado.

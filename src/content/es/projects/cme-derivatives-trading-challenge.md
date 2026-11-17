@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] CME Group Derivatives Trading Challenge
-Dates: [ES PENDIENTE] Aug 2025
+Title: CME Group Derivatives Trading Challenge
+Dates: ago 2025
+Document title: CME Group Derivatives Trading Challenge | Eithan Flores
 Hult project: YES (FIN-C · Derivatives & Risk Management, CME Derivatives Simulation)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] In August 2025 I took part in the CME Group Derivatives Trading Challenge as part of FIN-C (Derivatives & Risk Management) at Hult International Business School, using the CME Group trading simulation. The brief was to design and execute a futures strategy and present it to a judging panel.
+## Contexto
+En agosto de 2025 participé en el CME Group Derivatives Trading Challenge como parte de FIN-C (Derivatives & Risk Management) en Hult International Business School, usando la simulación de trading de CME Group. El encargo era diseñar y ejecutar una estrategia de futuros y presentarla ante un jurado.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] Can a rules-based, trend-following approach on a liquid equity-index future produce a clear, measurable result within the challenge window?
+## Pregunta o tesis
+¿Puede un enfoque de seguimiento de tendencia, basado en reglas, sobre un futuro líquido de un índice accionario producir un resultado claro y medible dentro de la ventana del desafío?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I built and executed a trend-following futures strategy focused on Russell 2000 (RTY) futures. The strategy was presented to the judging panel as part of the challenge.
+## Método
+Diseñé y ejecuté una estrategia de futuros de seguimiento de tendencia, centrada en los futuros del Russell 2000 (RTY). La estrategia se presentó ante el jurado como parte del desafío.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] The Russell 2000 (RTY) futures trade returned +3.49% ROI.
+## Resultado
+La operación de futuros del Russell 2000 (RTY) obtuvo un ROI de +3.49%.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Futures market concepts; trend-following strategy design; trade execution and presentation for a judging panel.
+## Habilidades y herramientas
+Conceptos del mercado de futuros; diseño de estrategias de seguimiento de tendencia; ejecución de operaciones y presentación ante un jurado.

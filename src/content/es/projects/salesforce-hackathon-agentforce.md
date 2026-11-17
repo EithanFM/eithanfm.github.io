@@ -1,19 +1,20 @@
-Title: [ES PENDIENTE] Salesforce Fall Hack-a-thon (Agentforce track)
-Dates: [ES PENDIENTE] Oct 15, 2026
+Title: Salesforce Fall Hack-a-thon (Agentforce track)
+Dates: 15 oct 2026
+Document title: Salesforce Agentforce Hack-a-thon | Eithan Flores
 Hult project: YES (hosted through Hult International Business School)
 Publishable files: none
 
-## [ES PENDIENTE] Context
-[ES PENDIENTE] On October 15, 2026 I joined the Salesforce Fall Hack-a-thon at Hult on the Agentforce track. The challenge was to build and test a working AI agent in a single evening.
+## Contexto
+El 15 de octubre de 2026 participé en el Salesforce Fall Hack-a-thon en Hult, en el track de Agentforce. El desafío era construir y probar un agente de IA funcional en una sola noche.
 
-## [ES PENDIENTE] Question or thesis
-[ES PENDIENTE] Can a useful Salesforce AI agent be designed, built, and tested end to end with Agentforce Builder within one evening?
+## Pregunta o tesis
+¿Se puede diseñar, construir y probar de extremo a extremo un agente de IA útil de Salesforce con Agentforce Builder en una sola noche?
 
-## [ES PENDIENTE] Method
-[ES PENDIENTE] I used Agentforce Builder to build and test a working AI agent in Salesforce during the hack-a-thon session.
+## Método
+Usé Agentforce Builder para construir y probar un agente de IA funcional en Salesforce durante la sesión del hack-a-thon.
 
-## [ES PENDIENTE] Result
-[ES PENDIENTE] I placed 1st in the Agentforce Build Challenge Kahoot and earned a Salesforce Marketing Cloud Certification voucher.
+## Resultado
+Obtuve el primer lugar en el Agentforce Build Challenge Kahoot y gané un voucher para la Salesforce Marketing Cloud Certification.
 
-## [ES PENDIENTE] Skills and tools
-[ES PENDIENTE] Salesforce Agentforce Builder; rapid AI agent prototyping and testing; hack-a-thon delivery under time pressure.
+## Habilidades y herramientas
+Salesforce Agentforce Builder; prototipado y prueba rápidos de agentes de IA; entrega en un hack-a-thon bajo presión de tiempo.

@@ -22,8 +22,6 @@ export type UiCopy = {
   linkedin: string;
 };
 
-const MARK = "[ES PENDIENTE]";
-
 const english: UiCopy = {
   skipToContent: "Skip to content",
   sectionsLabel: "Sections",
@@ -45,20 +43,30 @@ const english: UiCopy = {
   linkedin: "LinkedIn",
 };
 
-const keepInEnglish = new Set<keyof UiCopy>(["linkedin"]);
-
-function spanishUi(): UiCopy {
-  return Object.fromEntries(
-    Object.entries(english).map(([key, value]) => [
-      key,
-      keepInEnglish.has(key as keyof UiCopy) ? value : `${MARK} ${value}`,
-    ]),
-  ) as UiCopy;
-}
+const spanish: UiCopy = {
+  skipToContent: "Saltar al contenido",
+  sectionsLabel: "Secciones",
+  languageLabel: "Idioma",
+  english: "Inglés",
+  spanish: "Español",
+  about: "Sobre mí",
+  projects: "Proyectos",
+  skills: "Habilidades",
+  certificates: "Certificados",
+  contact: "Contacto",
+  downloadCv: "Descargar CV",
+  backToTop: "Volver arriba",
+  backToProjects: "Volver a proyectos",
+  download: "Descargar",
+  seeAll: "Ver todos",
+  showFewer: "Ver menos",
+  email: "Correo",
+  linkedin: "LinkedIn",
+};
 
 const copy: Record<Locale, UiCopy> = {
   en: english,
-  es: spanishUi(),
+  es: spanish,
 };
 
 export function getUi(locale: Locale) {
