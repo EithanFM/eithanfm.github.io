@@ -12,7 +12,7 @@ const documentTitles: Record<string, string> = {
   "global-crises-ai-minerals": "The Refining Chokepoint",
   "hult-prize-ohuatl": "Hult Prize, Ohuatl",
   "korn-ferry-case-competition": "Korn Ferry Client Case Competition",
-  "materials-startup-operations": "Operations Consultant, Hult",
+  "materials-startup-operations": "AeroShield Class Project",
   "microsoft-msft-valuation": "MSFT Equity Research and Valuation",
   "nonprofit-growth-strategy": "Strategy Consultant, The Possible Zone",
   "salesforce-hackathon-agentforce": "Salesforce Agentforce Hack-a-thon",
