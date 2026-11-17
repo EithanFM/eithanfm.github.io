@@ -1,6 +1,11 @@
 ---
-import { site } from "../data/site";
+import { getSite } from "../i18n/content";
+import { getUi, type Locale } from "../i18n/ui";
 import Section from "./Section.astro";
+
+const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
+const site = getSite(locale);
+const ui = getUi(locale);
 
 const certificateHref = (file: string) => `${import.meta.env.BASE_URL}certificates/${file}`;
 const downloadName = (file: string) => `Eithan-Flores-${file.replace(/\.pdf$/, "")}.pdf`;
@@ -28,7 +33,7 @@ const featured = featuredFiles.map((file) => {
 const total = site.certificateGroups.reduce((count, group) => count + group.items.length, 0);
 ---
 
-<Section id="certificates" title="Certificates">
+<Section id="certificates" title={ui.certificates}>
   <ul class="divide-y divide-line border-y border-line">
     {
       featured.map((item) => (
@@ -43,7 +48,7 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
               download={downloadName(item.file)}
               class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
             >
-              Download
+              {ui.download}
             </a>
           </div>
         </li>
@@ -54,8 +59,8 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
     <summary
       class="inline-flex min-h-11 max-w-full cursor-pointer list-none items-center border border-accent bg-card px-4 text-sm font-medium text-accent [&::-webkit-details-marker]:hidden"
     >
-      <span class="see-all">See all ({total})</span>
-      <span class="show-fewer">Show fewer</span>
+      <span class="see-all">{ui.seeAll} ({total})</span>
+      <span class="show-fewer">{ui.showFewer}</span>
     </summary>
     <div class="mt-8 space-y-12">
       {
@@ -75,7 +80,7 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
                       download={downloadName(item.file)}
                       class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
                     >
-                      Download
+                      {ui.download}
                     </a>
                   </div>
                 </li>

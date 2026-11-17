@@ -1,9 +1,14 @@
 ---
-import { site } from "../data/site";
+import { getSite } from "../i18n/content";
+import { getUi, type Locale } from "../i18n/ui";
 import Section from "./Section.astro";
+
+const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
+const site = getSite(locale);
+const ui = getUi(locale);
 ---
 
-<Section id="about" title="About">
+<Section id="about" title={ui.about}>
   <div class="max-w-2xl space-y-5 text-lg leading-relaxed text-pretty sm:hyphens-auto sm:text-justify">
     {site.about.map((paragraph) => <p>{paragraph}</p>)}
   </div>
