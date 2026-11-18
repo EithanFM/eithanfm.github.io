@@ -33,7 +33,7 @@ const featured = featuredFiles.map((file) => {
 const total = site.certificateGroups.reduce((count, group) => count + group.items.length, 0);
 ---
 
-<Section id="certificates" title={ui.certificates}>
+<Section id="certificates" title={ui.featuredCertificates}>
   <ul class="divide-y divide-line border-y border-line">
     {
       featured.map((item) => (
@@ -62,11 +62,13 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
       <span class="see-all">{ui.seeAll} ({total})</span>
       <span class="show-fewer">{ui.showFewer}</span>
     </summary>
-    <div class="mt-8 space-y-12">
+    <div class="mt-8">
+      <h3 class="font-serif text-2xl font-medium tracking-tight text-navy">{ui.allCertificates}</h3>
+      <div class="mt-8 space-y-12">
       {
         site.certificateGroups.map((group) => (
           <div>
-            <h3 class="font-serif text-2xl font-medium tracking-tight text-navy">{group.heading}</h3>
+            <h4 class="font-serif text-xl font-medium tracking-tight text-navy">{group.heading}</h4>
             <ul class="mt-5 divide-y divide-line border-y border-line">
               {group.items.map((item) => (
                 <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
@@ -89,6 +91,7 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
           </div>
         ))
       }
+      </div>
     </div>
   </details>
 </Section>
