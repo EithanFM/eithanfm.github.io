@@ -70,6 +70,10 @@ ES: Volver a proyectos
 EN: Back to top
 ES: Volver arriba
 
+## ui.featuredCertificates
+EN: Featured Certificates
+ES: Certificados destacados
+
 ## ui.download
 EN: Download
 ES: Descargar
@@ -81,6 +85,10 @@ ES: Ver todos
 ## ui.showFewer
 EN: Show fewer
 ES: Ver menos
+
+## ui.allCertificates
+EN: All Certificates
+ES: Todos los certificados
 
 ## ui.linkedin
 Note: Name. Leave in English.

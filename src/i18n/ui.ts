@@ -11,6 +11,8 @@ export type UiCopy = {
   projects: string;
   skills: string;
   certificates: string;
+  featuredCertificates: string;
+  allCertificates: string;
   contact: string;
   downloadCv: string;
   backToTop: string;
@@ -32,6 +34,8 @@ const english: UiCopy = {
   projects: "Projects",
   skills: "Skills",
   certificates: "Certificates",
+  featuredCertificates: "Featured Certificates",
+  allCertificates: "All Certificates",
   contact: "Contact",
   downloadCv: "Download CV",
   backToTop: "Back to top",
@@ -53,6 +57,8 @@ const spanish: UiCopy = {
   projects: "Proyectos",
   skills: "Habilidades",
   certificates: "Certificados",
+  featuredCertificates: "Certificados destacados",
+  allCertificates: "Todos los certificados",
   contact: "Contacto",
   downloadCv: "Descargar CV",
   backToTop: "Volver arriba",
