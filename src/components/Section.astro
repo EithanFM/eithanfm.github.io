@@ -2,19 +2,29 @@
 interface Props {
   id: string;
   title: string;
+  eyebrow?: string;
 }
 
-const { id, title } = Astro.props;
+const { id, title, eyebrow } = Astro.props;
 const headingId = `${id}-title`;
 ---
 
-<section id={id} class="border-t border-line py-16 sm:py-20" aria-labelledby={headingId}>
+<section id={id} class="border-t border-line py-16 sm:py-24" aria-labelledby={headingId}>
   <div class="shell">
-    <h2 id={headingId} class="font-serif text-3xl font-medium tracking-tight text-navy text-balance sm:text-4xl">
-      {title}
-    </h2>
-    <div class="mt-4 h-0.5 w-14 bg-accent" aria-hidden="true"></div>
-    <div class="mt-8 sm:mt-10">
+    <div data-reveal>
+      {eyebrow ? <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{eyebrow}</p> : null}
+      <h2
+        id={headingId}
+        class:list={[
+          "font-serif text-3xl font-medium tracking-tight text-navy text-balance sm:text-4xl",
+          eyebrow ? "mt-3" : "",
+        ]}
+      >
+        {title}
+      </h2>
+      <div class="rule mt-4 h-0.5 w-14 bg-accent" aria-hidden="true"></div>
+    </div>
+    <div class="mt-8 sm:mt-12">
       <slot />
     </div>
   </div>

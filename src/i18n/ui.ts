@@ -22,6 +22,14 @@ export type UiCopy = {
   showFewer: string;
   email: string;
   linkedin: string;
+  menu: string;
+  closeMenu: string;
+  highlights: string;
+  filterProjects: string;
+  allProjects: string;
+  readCase: string;
+  nextProject: string;
+  cvShort: string;
 };
 
 const english: UiCopy = {
@@ -45,6 +53,14 @@ const english: UiCopy = {
   showFewer: "Show fewer",
   email: "Email",
   linkedin: "LinkedIn",
+  menu: "Menu",
+  closeMenu: "Close menu",
+  highlights: "Highlights",
+  filterProjects: "Filter projects",
+  allProjects: "All",
+  readCase: "Read the case",
+  nextProject: "Next project",
+  cvShort: "CV",
 };
 
 const spanish: UiCopy = {
@@ -68,6 +84,14 @@ const spanish: UiCopy = {
   showFewer: "Ver menos",
   email: "Correo",
   linkedin: "LinkedIn",
+  menu: "Menú",
+  closeMenu: "Cerrar menú",
+  highlights: "Datos clave",
+  filterProjects: "Filtrar proyectos",
+  allProjects: "Todos",
+  readCase: "Leer el caso",
+  nextProject: "Siguiente proyecto",
+  cvShort: "CV",
 };
 
 const copy: Record<Locale, UiCopy> = {

@@ -22,8 +22,28 @@ export const site = {
   cv: {
     label: "Download CV",
   },
+  school: "Hult International Business School",
+  facts: [
+    { label: "Program", value: "BBA, Finance & Management" },
+    { label: "Graduation", value: "Expected May 2028" },
+    { label: "Based in", value: "Cambridge, MA" },
+    { label: "Languages", value: "English · Spanish · French" },
+  ],
+  highlights: [
+    { value: "$134.57", label: "MSFT target price from my 3-stage DCF (SELL call)" },
+    { value: "+3.49%", label: "ROI on the Russell 2000 (RTY) futures trade, CME Challenge" },
+    { value: "40+", label: "first-year students represented as Cohort Captain" },
+    { value: "3", label: "consulting projects: The Possible Zone, AeroShield and the Korn Ferry case competition" },
+  ],
+  projectCategories: {
+    finance: "Finance & markets",
+    consulting: "Consulting",
+    innovation: "Research & innovation",
+    leadership: "Leadership",
+  },
   projects: [
     {
+      category: "finance",
       title: "Microsoft (MSFT) Equity Research & Valuation",
       dates: "Sep to Dec 2025",
       href: "/projects/microsoft-msft-valuation/",
@@ -32,6 +52,7 @@ export const site = {
       note: "Academic project, not investment advice.",
     },
     {
+      category: "finance",
       title: "CME Group Derivatives Trading Challenge",
       dates: "Aug 2025",
       href: "/projects/cme-derivatives-trading-challenge/",
@@ -39,6 +60,7 @@ export const site = {
         "Designed and ran a trend-following futures strategy; the Russell 2000 (RTY) trade returned +3.49% ROI.",
     },
     {
+      category: "consulting",
       title: "Strategy Consultant, The Possible Zone",
       dates: "Jun 2026",
       href: "/projects/nonprofit-growth-strategy/",
@@ -46,6 +68,7 @@ export const site = {
         "Led research on ESG, impact measurement and sustainability indicators for The Possible Zone and presented a phased growth strategy to its senior leadership.",
     },
     {
+      category: "consulting",
       title: "Operations Consultant, AeroShield (Class Project, Live Client)",
       dates: "Mar to Apr 2026",
       href: "/projects/materials-startup-operations/",
@@ -53,6 +76,7 @@ export const site = {
         "Built operations KPIs and supported a capacity and bottleneck analysis in a Hult class project for AeroShield, an advanced-materials startup.",
     },
     {
+      category: "consulting",
       title: "Korn Ferry, Client Case Competition",
       dates: "Apr 2026",
       href: "/projects/korn-ferry-case-competition/",
@@ -60,6 +84,7 @@ export const site = {
         "Built the 3-phase implementation roadmap for an AI client-intelligence platform and presented the business impact case.",
     },
     {
+      category: "innovation",
       title: "Salesforce Fall Hack-a-thon (Agentforce track)",
       dates: "Oct 2026",
       href: "/projects/salesforce-hackathon-agentforce/",
@@ -67,6 +92,7 @@ export const site = {
         "Built and tested a working AI agent with Agentforce Builder in one evening; 1st place in the Agentforce Build Challenge Kahoot.",
     },
     {
+      category: "innovation",
       title: "Hult Prize, Ohuatl",
       dates: "Sep 2025 to Feb 2026",
       href: "/projects/hult-prize-ohuatl/",
@@ -74,24 +100,31 @@ export const site = {
         "Co-developed a circular-fashion solution to textile waste (UN SDGs 12 & 13), validated with market research in Mexico.",
     },
     {
+      category: "leadership",
       title: "Cohort Captain, Hult Student Association",
       dates: "Sep 2024 to May 2025",
       description: "Main link between 40+ first-year students and faculty; ran 8 team-building sessions.",
     },
     {
+      category: "finance",
       title: "Amazon (AMZN) Financial Analysis 2020 to 2025",
       dates: "Feb to Apr 2025",
       description: "Analyzed 6 years of SEC filings and presented growth trends.",
       href: "/projects/amazon-amzn-financial-analysis/",
     },
     {
+      category: "innovation",
       title: "The Refining Chokepoint, U.S. AI Supply Chain Vulnerability",
       dates: "Jun 2026 (report dated Jun 16, 2026)",
       href: "/projects/global-crises-ai-minerals/",
     },
   ],
-  skills:
-    "Excel financial modeling (DCF, WACC, sensitivity, comps) · Python (basic) · SQL (basic) · PowerPoint · Canva",
+  skillGroups: [
+    { label: "Financial modeling", items: ["Excel", "DCF", "WACC", "Sensitivity analysis", "Comps"] },
+    { label: "Data", items: ["Python (basic)", "SQL (basic)"] },
+    { label: "Communication", items: ["PowerPoint", "Canva"] },
+    { label: "Languages", items: ["English", "Spanish", "French"] },
+  ],
   certificateGroups: [
     {
       heading: "Claude Academy",

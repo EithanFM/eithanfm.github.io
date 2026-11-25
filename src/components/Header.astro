@@ -1,70 +1,231 @@
 ---
-import { getSite } from "../i18n/content";
+import { getNavigation, getSite } from "../i18n/content";
 import { getUi, localeHome, localePath, type Locale } from "../i18n/ui";
-import { getNavigation } from "../i18n/content";
 
 const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
 const site = getSite(locale);
 const ui = getUi(locale);
 const navigation = getNavigation(locale);
 const currentPath = Astro.url.pathname || "/";
-const enHref = localePath("en", currentPath);
-const esHref = localePath("es", currentPath);
+const languages = [
+  { code: "en", label: "EN", name: ui.english, href: localePath("en", currentPath) },
+  { code: "es", label: "ES", name: ui.spanish, href: localePath("es", currentPath) },
+] as const;
+const cvHref = `${import.meta.env.BASE_URL}eithan-flores-cv.pdf`;
 ---
 
-<header class="sticky top-0 z-20 border-b border-line bg-card/95 shadow-[0_8px_24px_-18px_rgb(10_37_64/0.55)] backdrop-blur-md">
-  <div class="h-0.5 bg-accent" aria-hidden="true"></div>
-  <div class="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+<header
+  id="site-header"
+  class="group/header sticky top-0 z-30 border-b border-transparent bg-paper/85 backdrop-blur-md transition-[border-color,background-color,box-shadow] duration-300 data-[scrolled]:border-line data-[scrolled]:bg-card/90 data-[scrolled]:shadow-[0_10px_30px_-22px_rgb(10_37_64/0.6)]"
+>
+  <div
+    id="scroll-progress"
+    class="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-accent"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="shell flex h-16 items-center justify-between gap-4">
     <a
       href={localeHome(locale)}
-      class="flex min-h-11 items-center -my-2 font-serif text-lg tracking-tight text-navy transition-colors duration-150 hover:text-accent"
+      class="group flex min-h-11 shrink-0 items-center gap-3 whitespace-nowrap font-serif text-lg tracking-tight text-navy"
     >
-      {site.name}
+      <span
+        class="grid size-8 place-items-center bg-navy font-sans text-[0.6875rem] font-semibold tracking-[0.08em] text-white transition-colors duration-200 group-hover:bg-accent"
+        aria-hidden="true">EF</span
+      >
+      <span>{site.name}</span>
     </a>
-    <div class="flex min-w-0 flex-wrap items-center justify-between gap-x-4 gap-y-2 md:justify-end">
-    <nav aria-label={ui.sectionsLabel}>
-      <ul class="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-5">
+
+    <nav aria-label={ui.sectionsLabel} class="hidden min-w-0 md:block">
+      <ul class="flex items-center gap-1">
         {
           navigation.map((item) => (
             <li>
               <a
                 href={item.href}
-                class="group inline-flex min-h-11 min-w-11 items-center justify-center px-2 py-[12.25px] -mx-2 -my-[8.25px] text-[0.8125rem] font-medium text-accent transition-colors duration-150 hover:text-navy-soft sm:text-sm"
+                data-nav-link={item.href.split("#")[1]}
+                class="nav-link relative inline-flex min-h-11 items-center whitespace-nowrap px-2.5 text-sm lg:px-3 font-medium text-muted transition-colors duration-150 hover:text-navy data-[active]:text-navy"
               >
-                <span
-                  class="underline decoration-transparent decoration-2 underline-offset-[6px] group-hover:decoration-accent group-focus-visible:decoration-accent"
-                >
-                  {item.label}
-                </span>
+                {item.label}
               </a>
             </li>
           ))
         }
       </ul>
     </nav>
-    <nav aria-label={ui.languageLabel} class="flex items-center">
+
+    <div class="flex items-center gap-2">
+      <nav aria-label={ui.languageLabel} class="flex items-center border border-line bg-card p-0.5">
+        {
+          languages.map((lang) => (
+            <a
+              href={lang.href}
+              hreflang={lang.code}
+              lang={lang.code}
+              title={lang.name}
+              aria-current={locale === lang.code ? "true" : undefined}
+              class="inline-flex min-h-10 min-w-10 items-center justify-center text-xs font-semibold tracking-wide text-accent no-underline transition-colors duration-150 hover:bg-tint aria-[current]:bg-navy aria-[current]:text-white"
+            >
+              {lang.label}
+            </a>
+          ))
+        }
+      </nav>
       <a
-        href={enHref}
-        hreflang="en"
-        lang="en"
-        aria-label={ui.english}
-        aria-current={locale === "en" ? "true" : undefined}
-        class="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-accent no-underline"
+        href={cvHref}
+        download="Eithan_Flores_CV.pdf"
+        class="hidden min-h-11 items-center whitespace-nowrap bg-accent px-4 text-sm font-medium text-white no-underline transition-colors duration-150 hover:bg-navy lg:inline-flex"
       >
-        EN
+        {site.cv.label}
       </a>
-      <span aria-hidden="true" class="text-sm text-muted">|</span>
-      <a
-        href={esHref}
-        hreflang="es"
-        lang="es"
-        aria-label={ui.spanish}
-        aria-current={locale === "es" ? "true" : undefined}
-        class="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-accent no-underline"
+      <button
+        type="button"
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-open-label={ui.menu}
+        data-close-label={ui.closeMenu}
+        aria-label={ui.menu}
+        class="relative grid size-11 place-items-center border border-line bg-card text-navy md:hidden"
       >
-        ES
-      </a>
-    </nav>
+        <span
+          class="absolute h-0.5 w-5 -translate-y-1.5 bg-current transition-transform duration-300 group-data-[open]/header:translate-y-0 group-data-[open]/header:rotate-45"
+          aria-hidden="true"></span>
+        <span
+          class="absolute h-0.5 w-5 bg-current transition-opacity duration-200 group-data-[open]/header:opacity-0"
+          aria-hidden="true"></span>
+        <span
+          class="absolute h-0.5 w-5 translate-y-1.5 bg-current transition-transform duration-300 group-data-[open]/header:translate-y-0 group-data-[open]/header:-rotate-45"
+          aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    inert
+    class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-data-[open]/header:grid-rows-[1fr] md:hidden"
+  >
+    <div class="overflow-hidden">
+      <nav aria-label={ui.sectionsLabel} class="shell border-t border-line pb-5 pt-2">
+        <ul class="divide-y divide-line">
+          {
+            navigation.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  data-nav-link={item.href.split("#")[1]}
+                  class="flex min-h-12 items-center justify-between font-serif text-xl text-navy data-[active]:text-accent"
+                >
+                  {item.label}
+                  <span aria-hidden="true" class="text-base text-accent">→</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <a
+          href={cvHref}
+          download="Eithan_Flores_CV.pdf"
+          class="mt-4 flex min-h-11 items-center justify-center bg-accent px-4 text-sm font-medium text-white no-underline"
+        >
+          {site.cv.label}
+        </a>
+      </nav>
     </div>
   </div>
 </header>
+
+<style>
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.55rem;
+    height: 2px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s var(--ease-out-strong);
+  }
+
+  .nav-link:hover::after,
+  .nav-link[data-active]::after {
+    transform: scaleX(1);
+  }
+</style>
+
+<script>
+  const header = document.getElementById("site-header");
+  const button = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+  const progress = document.getElementById("scroll-progress");
+
+  if (header && button && menu) {
+    const setOpen = (open: boolean) => {
+      header.toggleAttribute("data-open", open);
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", (open ? button.dataset.closeLabel : button.dataset.openLabel) ?? "");
+      menu.toggleAttribute("inert", !open);
+    };
+    button.addEventListener("click", () => setOpen(!header.hasAttribute("data-open")));
+    menu.addEventListener("click", (event) => {
+      if ((event.target as HTMLElement).closest("a")) setOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && header.hasAttribute("data-open")) {
+        setOpen(false);
+        button.focus();
+      }
+    });
+    matchMedia("(min-width: 48rem)").addEventListener("change", (event) => {
+      if (event.matches) setOpen(false);
+    });
+
+    let ticking = false;
+    const onScroll = () => {
+      ticking = false;
+      const max = document.documentElement.scrollHeight - innerHeight;
+      header.toggleAttribute("data-scrolled", scrollY > 8);
+      if (progress) progress.style.transform = `scaleX(${max > 0 ? Math.min(scrollY / max, 1) : 0})`;
+    };
+    addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(onScroll);
+        }
+      },
+      { passive: true },
+    );
+    onScroll();
+  }
+
+  const links = [...document.querySelectorAll<HTMLAnchorElement>("[data-nav-link]")];
+  const sections = [...new Set(links.map((link) => link.dataset.navLink))]
+    .map((id) => (id ? document.getElementById(id) : null))
+    .filter((section): section is HTMLElement => section !== null);
+
+  if (sections.length > 0) {
+    const clearAtTop = () => {
+      if (scrollY + innerHeight * 0.4 < sections[0].offsetTop) {
+        links.forEach((link) => link.removeAttribute("data-active"));
+      }
+    };
+    addEventListener("scroll", clearAtTop, { passive: true });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          for (const link of links) {
+            link.toggleAttribute("data-active", link.dataset.navLink === entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+    sections.forEach((section) => observer.observe(section));
+  }
+</script>

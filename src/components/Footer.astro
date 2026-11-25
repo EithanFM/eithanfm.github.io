@@ -1,26 +1,42 @@
 ---
-import { getSite } from "../i18n/content";
+import { getNavigation, getSite } from "../i18n/content";
 import { getUi, type Locale } from "../i18n/ui";
 
 const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
 const site = getSite(locale);
 const ui = getUi(locale);
+const navigation = getNavigation(locale);
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-line">
-  <div class="shell flex flex-col gap-6 py-10 sm:flex-row sm:items-end sm:justify-between">
-    <div class="min-w-0">
-      <p class="font-serif text-xl tracking-tight text-navy">{site.name}</p>
-    </div>
-    <div class="flex flex-col items-start gap-2 text-sm sm:items-end">
+<footer class="bg-[#071a2e] text-white/70">
+  <div class="shell flex flex-col gap-8 py-10 md:flex-row md:items-center md:justify-between">
+    <p class="font-serif text-xl tracking-tight text-white">{site.name}</p>
+    <nav aria-label={ui.sectionsLabel}>
+      <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm">
+        {
+          navigation.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="inline-flex min-h-11 items-center text-white/70 no-underline transition-colors duration-150 hover:text-white"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="flex flex-col items-start gap-1 text-sm md:items-end">
       <a
         href="#top"
-        class="inline-flex min-h-11 items-center -my-3 font-medium text-accent underline decoration-transparent underline-offset-4 transition-colors duration-150 hover:text-navy-soft hover:decoration-accent"
+        class="group inline-flex min-h-11 items-center gap-1.5 font-medium text-white no-underline"
       >
         {ui.backToTop}
+        <span aria-hidden="true" class="transition-transform duration-200 group-hover:-translate-y-0.5">↑</span>
       </a>
-      <p class="text-muted">© {year} {site.name}</p>
+      <p>© {year} {site.name}</p>
     </div>
   </div>
 </footer>

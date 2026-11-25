@@ -9,5 +9,18 @@ const ui = getUi(locale);
 ---
 
 <Section id="skills" title={ui.skills}>
-  <p class="max-w-3xl text-lg leading-relaxed">{site.skills}</p>
+  <div class="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+    {
+      site.skillGroups.map((group, index) => (
+        <div data-reveal style={`--i: ${index}`} class="bg-card p-6 sm:p-7">
+          <h3 class="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-muted">{group.label}</h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <li class="border border-line bg-paper px-3 py-1.5 text-sm font-medium text-navy">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
 </Section>

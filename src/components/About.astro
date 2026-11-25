@@ -9,7 +9,13 @@ const ui = getUi(locale);
 ---
 
 <Section id="about" title={ui.about}>
-  <div class="max-w-2xl space-y-5 text-lg leading-relaxed text-pretty sm:hyphens-auto sm:text-justify">
-    {site.about.map((paragraph) => <p>{paragraph}</p>)}
+  <div class="max-w-3xl space-y-6 text-lg leading-relaxed text-pretty sm:hyphens-auto sm:text-justify sm:text-xl sm:leading-relaxed">
+    {
+      site.about.map((paragraph, index) => (
+        <p data-reveal style={`--i: ${index}`} class:list={[index === 0 ? "font-serif text-navy sm:text-2xl" : ""]}>
+          {paragraph}
+        </p>
+      ))
+    }
   </div>
 </Section>
