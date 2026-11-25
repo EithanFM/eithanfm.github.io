@@ -9,7 +9,30 @@ export const esSite = {
     "Soy estudiante de BBA en Hult International Business School (campus de Boston, Cambridge, MA), con concentración en Finance and Management (graduación prevista en mayo de 2028). Soy originario de Córdoba, México, y trabajo en inglés, español y francés.",
     "Mi trabajo hasta ahora está en la intersección de finanzas y estrategia: he elaborado una valuación DCF de Microsoft, he operado futuros en el CME Group Derivatives Trading Challenge y he trabajado en proyectos con cliente real para The Possible Zone y AeroShield, además de un case competition de Korn Ferry. Me interesa especialmente usar datos e IA para tomar mejores decisiones de negocio, y planeo continuar con un Master in Business Analytics.",
   ],
-  skills: "Modelado financiero en Excel (DCF, WACC, sensibilidad, comps) · Python (básico) · SQL (básico) · PowerPoint · Canva",
+  facts: [
+    { label: "Programa", value: "BBA, Finance & Management" },
+    { label: "Graduación", value: "Prevista en mayo de 2028" },
+    { label: "Ubicación", value: "Cambridge, MA" },
+    { label: "Idiomas", value: "Inglés · Español · Francés" },
+  ],
+  highlights: [
+    { value: "$134.57", label: "precio objetivo de MSFT con mi DCF de 3 etapas (recomendación SELL)" },
+    { value: "+3.49%", label: "ROI en la operación de futuros del Russell 2000 (RTY), CME Challenge" },
+    { value: "40+", label: "estudiantes de primer año representados como Capitán de cohorte" },
+    { value: "3", label: "proyectos de consultoría: The Possible Zone, AeroShield y el case competition de Korn Ferry" },
+  ],
+  projectCategories: {
+    finance: "Finanzas y mercados",
+    consulting: "Consultoría",
+    innovation: "Investigación e innovación",
+    leadership: "Liderazgo",
+  },
+  skillGroups: [
+    { label: "Modelado financiero", items: ["Excel", "DCF", "WACC", "Análisis de sensibilidad", "Comps"] },
+    { label: "Datos", items: ["Python (básico)", "SQL (básico)"] },
+    { label: "Comunicación", items: ["PowerPoint", "Canva"] },
+    { label: "Idiomas", items: ["Inglés", "Español", "Francés"] },
+  ],
   projects: {
     "microsoft-msft-valuation": {
       title: "Equity Research y valuación de Microsoft (MSFT)",

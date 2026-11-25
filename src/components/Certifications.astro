@@ -34,63 +34,69 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
 ---
 
 <Section id="certificates" title={ui.featuredCertificates}>
-  <ul class="divide-y divide-line border-y border-line">
+  <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {
-      featured.map((item) => (
-        <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-          <div class="min-w-0">
-            <p class="font-medium text-navy text-balance">{item.title}</p>
-            <p class="mt-1 text-sm leading-6 text-ink">{item.issuer} · {item.date}</p>
-          </div>
-          <div class="flex shrink-0 flex-wrap items-center">
-            <a
-              href={certificateHref(item.file)}
-              download={downloadName(item.file)}
-              class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
-            >
-              {ui.download}
-            </a>
-          </div>
+      featured.map((item, index) => (
+        <li data-reveal style={`--i: ${index % 3}`} class="min-w-0">
+          <a
+            href={certificateHref(item.file)}
+            download={downloadName(item.file)}
+            class="cert group flex h-full min-w-0 flex-col border border-line bg-card p-6 text-ink no-underline shadow-card"
+          >
+            <span class="text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-accent">{item.issuer}</span>
+            <span class="mt-3 font-serif text-xl font-medium leading-snug text-navy text-balance">{item.title}</span>
+            <span class="mt-auto flex items-center justify-between gap-4 pt-6 text-sm">
+              <span class="text-muted">{item.date}</span>
+              <span class="inline-flex items-center gap-1.5 font-semibold text-accent">
+                {ui.download}
+                <span aria-hidden="true" class="dl-arrow">↓</span>
+              </span>
+            </span>
+          </a>
         </li>
       ))
     }
   </ul>
-  <details class="mt-8">
+
+  <details class="smooth mt-10" data-reveal>
     <summary
-      class="inline-flex min-h-11 max-w-full cursor-pointer list-none items-center border border-accent bg-card px-4 text-sm font-medium text-accent [&::-webkit-details-marker]:hidden"
+      class="inline-flex min-h-11 max-w-full cursor-pointer list-none items-center gap-2 border border-accent bg-card px-5 text-sm font-medium text-accent transition-colors duration-200 hover:bg-tint [&::-webkit-details-marker]:hidden"
     >
       <span class="see-all">{ui.seeAll} ({total})</span>
       <span class="show-fewer">{ui.showFewer}</span>
+      <span aria-hidden="true" class="chevron">↓</span>
     </summary>
-    <div class="mt-8">
+    <div class="pt-10">
       <h3 class="font-serif text-2xl font-medium tracking-tight text-navy">{ui.allCertificates}</h3>
-      <div class="mt-8 space-y-12">
-      {
-        site.certificateGroups.map((group) => (
-          <div>
-            <h4 class="font-serif text-xl font-medium tracking-tight text-navy">{group.heading}</h4>
-            <ul class="mt-5 divide-y divide-line border-y border-line">
-              {group.items.map((item) => (
-                <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-                  <div class="min-w-0">
-                    <p class="font-medium text-navy text-balance">{item.title}</p>
-                    <p class="mt-1 text-sm leading-6 text-ink">{item.issuer} · {item.date}</p>
-                  </div>
-                  <div class="flex shrink-0 flex-wrap items-center">
+      <div class="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-x-16">
+        {
+          site.certificateGroups.map((group) => (
+            <div class="min-w-0">
+              <h4 class="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-muted">
+                {group.heading} · {group.items.length}
+              </h4>
+              <ul class="mt-4 divide-y divide-line border-y border-line">
+                {group.items.map((item) => (
+                  <li class="flex min-w-0 flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                    <div class="min-w-0">
+                      <p class="font-medium text-navy text-balance">{item.title}</p>
+                      <p class="mt-1 text-sm leading-6 text-muted">
+                        {item.issuer} · {item.date}
+                      </p>
+                    </div>
                     <a
                       href={certificateHref(item.file)}
                       download={downloadName(item.file)}
-                      class="inline-flex min-h-11 items-center bg-accent px-4 text-sm font-medium text-white no-underline shadow-card"
+                      class="inline-flex min-h-11 shrink-0 items-center self-start border border-line px-4 text-sm font-medium text-accent no-underline transition-colors duration-150 hover:border-accent hover:bg-tint sm:self-center"
                     >
                       {ui.download}
                     </a>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </div>
   </details>
@@ -107,5 +113,36 @@ const total = site.certificateGroups.reduce((count, group) => count + group.item
 
   details[open] .show-fewer {
     display: inline;
+  }
+
+  .chevron {
+    transition: transform 0.3s var(--ease-out-strong);
+  }
+
+  details[open] .chevron {
+    transform: rotate(180deg);
+  }
+
+  .cert {
+    transition:
+      transform 0.35s var(--ease-out-strong),
+      box-shadow 0.35s var(--ease-out-strong),
+      border-color 0.2s ease;
+  }
+
+  .dl-arrow {
+    transition: transform 0.25s var(--ease-out-strong);
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .cert:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lift);
+      border-color: rgb(31 78 121 / 0.35);
+    }
+
+    .cert:hover .dl-arrow {
+      transform: translateY(3px);
+    }
   }
 </style>

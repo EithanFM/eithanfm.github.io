@@ -20,7 +20,10 @@ export function getSite(locale: Locale) {
     headline: esSite.headline,
     description: esSite.description,
     about: [...esSite.about],
-    skills: esSite.skills,
+    facts: esSite.facts.map((fact) => ({ ...fact })),
+    highlights: esSite.highlights.map((item) => ({ ...item })),
+    projectCategories: esSite.projectCategories,
+    skillGroups: esSite.skillGroups.map((group) => ({ label: group.label, items: [...group.items] })),
     photo: {
       ...site.photo,
       alt: esSite.photoAlt,

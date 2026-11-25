@@ -1,5 +1,4 @@
 ---
-import ProjectCard from "./ProjectCard.astro";
 import { getSite } from "../i18n/content";
 import { getUi, type Locale } from "../i18n/ui";
 import Section from "./Section.astro";
@@ -7,26 +6,186 @@ import Section from "./Section.astro";
 const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
 const site = getSite(locale);
 const ui = getUi(locale);
+const categories = Object.entries(site.projectCategories) as [keyof typeof site.projectCategories, string][];
+const counts = Object.fromEntries(
+  categories.map(([key]) => [key, site.projects.filter((project) => project.category === key).length]),
+);
 ---
 
 <Section id="projects" title={ui.projects}>
-  <div class="grid gap-6 lg:grid-cols-2">
+  <div data-reveal role="group" aria-label={ui.filterProjects} class="flex flex-wrap gap-2" id="project-filters">
+    <button type="button" data-filter="all" aria-pressed="true" class="filter-chip">
+      {ui.allProjects} <span class="count">{site.projects.length}</span>
+    </button>
     {
-      site.projects.map((project) => (
-        <ProjectCard href={"href" in project ? project.href : undefined}>
-          <div class="h-0.5 bg-accent" aria-hidden="true" />
-          <div class="flex flex-1 flex-col px-6 py-7 sm:px-7 sm:py-8">
-            <h3 class="font-serif text-2xl font-medium tracking-tight text-navy text-balance">{project.title}</h3>
-            <p class="mt-3 text-sm leading-6 text-ink">{project.dates}</p>
-            {"description" in project && project.description ? (
-              <p class="mt-4 leading-relaxed text-pretty sm:hyphens-auto sm:text-justify">{project.description}</p>
-            ) : null}
-            {"note" in project && project.note ? (
-              <p class="mt-4 text-sm leading-6 text-ink">{project.note}</p>
-            ) : null}
-          </div>
-        </ProjectCard>
+      categories.map(([key, label]) => (
+        <button type="button" data-filter={key} aria-pressed="false" class="filter-chip">
+          {label} <span class="count">{counts[key]}</span>
+        </button>
       ))
     }
   </div>
+
+  <ul class="mt-8 grid gap-5 md:grid-cols-2" id="project-grid">
+    {
+      site.projects.map((project, index) => {
+        const href = "href" in project ? project.href : undefined;
+        const Tag = href ? "a" : "div";
+        return (
+          <li data-category={project.category} data-reveal style={`--i: ${index % 2}`} class="project-item min-w-0">
+            <Tag
+              href={href}
+              class="card group relative flex h-full min-w-0 flex-col overflow-hidden border border-line bg-card text-ink no-underline shadow-card"
+            >
+              <span class="bar absolute inset-x-0 top-0 h-0.5 bg-accent" aria-hidden="true" />
+              <div class="flex flex-1 flex-col px-6 py-7 sm:px-8 sm:py-8">
+                <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+                  <span class="bg-tint px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-accent">
+                    {site.projectCategories[project.category as keyof typeof site.projectCategories]}
+                  </span>
+                  <span class="text-xs font-medium text-muted tabular-nums">{project.dates}</span>
+                </div>
+                <h3 class="mt-5 font-serif text-2xl font-medium leading-tight tracking-tight text-navy text-balance">
+                  {project.title}
+                </h3>
+                {"description" in project && project.description ? (
+                  <p class="mt-4 leading-relaxed text-pretty lg:hyphens-auto lg:text-justify">{project.description}</p>
+                ) : null}
+                {"note" in project && project.note ? <p class="mt-4 text-sm leading-6 text-muted">{project.note}</p> : null}
+                {href ? (
+                  <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-accent">
+                    {ui.readCase}
+                    <span aria-hidden="true" class="arrow">→</span>
+                  </span>
+                ) : null}
+              </div>
+            </Tag>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Section>
+
+<style>
+  .filter-chip {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-card);
+    padding-inline: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--color-accent);
+  }
+
+  .filter-chip:active {
+    transform: scale(0.97);
+  }
+
+  .filter-chip[aria-pressed="true"] {
+    background: var(--color-navy);
+    border-color: var(--color-navy);
+    color: #fff;
+  }
+
+  .count {
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.65;
+  }
+
+  .card {
+    transition:
+      transform 0.35s var(--ease-out-strong),
+      box-shadow 0.35s var(--ease-out-strong),
+      border-color 0.2s ease;
+  }
+
+  .bar {
+    transform: scaleX(0.18);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease-out-strong);
+  }
+
+  .arrow {
+    transition: transform 0.25s var(--ease-out-strong);
+  }
+
+  @media (hover: hover) {
+    a.card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift);
+      border-color: rgb(31 78 121 / 0.35);
+    }
+
+    a.card:hover .bar {
+      transform: scaleX(1);
+    }
+
+    a.card:hover .arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  a.card:focus-visible .bar {
+    transform: scaleX(1);
+  }
+
+  .project-item[hidden] {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .bar,
+    .arrow,
+    .filter-chip {
+      transition: none;
+    }
+
+    a.card:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  const filters = document.getElementById("project-filters");
+  const items = [...document.querySelectorAll<HTMLLIElement>("#project-grid .project-item")];
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+
+  filters?.addEventListener("click", (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-filter]");
+    if (!button || button.getAttribute("aria-pressed") === "true") return;
+    const value = button.dataset.filter;
+
+    const apply = () => {
+      filters.querySelectorAll("button[data-filter]").forEach((chip) => {
+        chip.setAttribute("aria-pressed", String(chip === button));
+      });
+      for (const item of items) {
+        item.hidden = value !== "all" && item.dataset.category !== value;
+        item.classList.add("is-visible");
+      }
+    };
+
+    if (!reduce.matches && "startViewTransition" in document) {
+      document.startViewTransition(apply);
+    } else {
+      apply();
+    }
+  });
+</script>

@@ -1,63 +1,78 @@
 ---
 import { Image } from "astro:assets";
 import { getSite } from "../i18n/content";
-import type { Locale } from "../i18n/ui";
+import { getUi, type Locale } from "../i18n/ui";
 
 const locale: Locale = Astro.currentLocale === "es" ? "es" : "en";
 const site = getSite(locale);
-
-const monogram = site.name
-  .split(/\s+/)
-  .filter(Boolean)
-  .map((part) => part[0])
-  .join("")
-  .slice(0, 2)
-  .toUpperCase();
+const ui = getUi(locale);
 ---
 
-<section class="py-14 sm:py-20 lg:py-24" aria-labelledby="site-name">
-  <div class="shell grid items-center gap-12 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-16 lg:grid-cols-[minmax(0,1fr)_18rem]">
+<section class="relative overflow-hidden pb-14 pt-8 sm:pb-20 sm:pt-16 lg:pb-24" aria-labelledby="site-name">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60rem_28rem_at_85%_-10%,var(--color-tint),transparent_70%)]"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="shell grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-16 lg:grid-cols-[minmax(0,1fr)_19rem]">
     <div class="min-w-0">
+      <p class="enter text-xs font-semibold uppercase tracking-[0.18em] text-accent" style="--i: 0">
+        {site.school}
+      </p>
       <h1
         id="site-name"
-        class="font-serif text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-navy text-balance md:text-6xl lg:text-7xl"
+        class="enter mt-4 font-serif text-[2.75rem] font-semibold leading-[1.02] tracking-tight text-navy text-balance md:text-6xl lg:text-7xl"
+        style="--i: 1"
       >
         {site.name}
       </h1>
-      <div class="mt-5 h-0.5 w-14 bg-accent" aria-hidden="true"></div>
-      <p class="mt-6 font-serif text-xl leading-snug text-ink text-pretty sm:hyphens-auto sm:text-2xl sm:text-justify">
+      <p
+        class="enter mt-6 max-w-2xl font-serif text-xl leading-snug text-ink text-pretty sm:hyphens-auto sm:text-2xl sm:text-justify"
+        style="--i: 2"
+      >
         {site.headline}
       </p>
-      <div class="mt-8 flex flex-col items-start gap-3">
+      <div class="enter mt-8 flex flex-wrap items-center gap-3" style="--i: 3">
         <a
           href={`${import.meta.env.BASE_URL}eithan-flores-cv.pdf`}
           download="Eithan_Flores_CV.pdf"
-          class="inline-flex min-h-11 items-center bg-accent px-5 text-sm font-medium tracking-wide text-white no-underline shadow-card"
+          class="group inline-flex min-h-12 items-center gap-2 bg-accent px-6 text-sm font-medium tracking-wide text-white no-underline shadow-card transition-[background-color,box-shadow,transform] duration-200 hover:bg-navy hover:shadow-lift active:scale-[0.98]"
         >
           {site.cv.label}
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-y-0.5">↓</span>
+        </a>
+        <a
+          href={site.contact.linkedin}
+          target="_blank"
+          rel="noopener"
+          class="group inline-flex min-h-12 items-center gap-2 border border-accent/40 bg-card px-6 text-sm font-medium text-accent no-underline transition-[border-color,color,transform] duration-200 hover:border-navy hover:text-navy active:scale-[0.98]"
+        >
+          {ui.linkedin}
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
         </a>
       </div>
+      <dl class="enter mt-10 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-line pt-6 lg:grid-cols-4" style="--i: 4">
+        {
+          site.facts.map((fact) => (
+            <div class="min-w-0">
+              <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-muted">{fact.label}</dt>
+              <dd class="mt-1.5 text-sm font-medium leading-snug text-navy">{fact.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
     </div>
-    <div class="mx-auto w-44 md:mx-0 md:w-full">
-      {
-        site.photo.src ? (
-          <Image
-            src={site.photo.src}
-            alt={site.photo.alt}
-            widths={[176, 288, 360, 576]}
-            sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, 11rem"
-            loading="eager"
-            class="aspect-square w-full border border-line object-cover shadow-card"
-          />
-        ) : (
-          <div class="flex aspect-[4/5] w-full flex-col items-center justify-center gap-3 border border-line bg-card px-4 text-center">
-            <span class="font-serif text-4xl tracking-tight text-navy" aria-hidden="true">
-              {monogram}
-            </span>
-            <p class="text-xs leading-5 text-ink">{site.photo.alt}</p>
-          </div>
-        )
-      }
+    <div class="enter-photo relative order-first w-32 sm:w-40 md:order-none md:w-full">
+      <div class="absolute -bottom-2 -right-2 h-full w-full border border-accent/30 bg-tint md:-bottom-3 md:-right-3" aria-hidden="true"></div>
+      <Image
+        src={site.photo.src}
+        alt={site.photo.alt}
+        widths={[192, 304, 384, 608]}
+        sizes="(min-width: 1024px) 19rem, (min-width: 768px) 16rem, 10rem"
+        loading="eager"
+        fetchpriority="high"
+        class="relative aspect-[4/5] w-full border border-line object-cover object-top shadow-card"
+      />
     </div>
   </div>
 </section>
